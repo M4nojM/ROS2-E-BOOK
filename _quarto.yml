@@ -2,7 +2,7 @@ project:
   type: book
   output-dir: docs
 book:
-  title: "ROS : Mea Via et Mea Disciplina "
+  title: "ROS 2 : Mea Via et Mea Disciplina "
   author: "Rishikesavan Ramesh"
   date: "4/5/2023"
   chapters:
