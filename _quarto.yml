@@ -8,7 +8,7 @@ book:
   chapters:
     - index.qmd
     - references.qmd
-    
+  cover-image: cover.png
 bibliography: references.bib
 
 format:
