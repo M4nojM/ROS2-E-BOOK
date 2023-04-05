@@ -1,6 +1,6 @@
 project:
   type: book
-
+  output-dir: docs
 book:
   title: "ROS : Mea Via et Mea Disciplina "
   author: "Rishikesavan Ramesh"
