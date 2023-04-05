@@ -1,0 +1,12 @@
+# Preface {.unnumbered}
+
+Welcome to our journey with ROS2! This e-book is a documentation of our experience with ROS2 as intermediate learners. We're excited to share our journey with you, and we hope that our experiences will be useful for those who are new to ROS2 as well.
+
+As two friends with a passion for robotics and automation, we decided to explore ROS2 as a way to build our skills and gain practical experience in the field. Along the way, we encountered many challenges and learned valuable lessons that we want to share with others.
+
+In this e-book, we'll take you through our journey with ROS2, from the basics of getting started to more advanced topics like application development and contributing to the ROS2 community. We've organized the content in a way that we hope will be easy to follow, with plenty of examples and practical tips to help you along the way.
+
+Whether you're a beginner just starting out with ROS2 or an intermediate learner looking to expand your skills, we hope that this e-book will be a valuable resource for you. So come along with us on our journey with ROS2, and let's explore the exciting world of robotics and automation together!
+
+
+

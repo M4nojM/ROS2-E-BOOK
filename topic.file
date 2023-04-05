@@ -1,0 +1,58 @@
+    - chapters/preface/index.qmd
+  
+    - part: chapters/introduction-to-ros2/index.qmd
+      chapters:
+        - chapters/what-is-ros2/index.qmd
+        - chapters/why-use-ros2/index.qmd
+        - chapters/how-to-use-this-book/index.qmd
+  
+    - part: chapters/getting-started-with-ros2/index.qmd
+      chapters:
+        - chapters/installation/index.qmd
+        - chapters/creating-a-workspace/index.qmd
+        - chapters/creating-your-first-ros2-package/index.qmd
+
+    - part: chapters/ros2-basics/index.qmd
+      chapters:
+        - chapters/installing-ros2/index.qmd
+        - chapters/creating-a-workspace/index.qmd
+        - chapters/command-line-tools/index.qmd
+        - chapters/nodes/index.qmd
+        - chapters/topics/index.qmd
+        - chapters/messages/index.qmd
+        - chapters/services/index.qmd
+
+    - part: chapters/ros2-concepts/index.qmd
+      chapters:
+        - chapters/publishers-and-subscribers/index.qmd
+        - chapters/clients-and-servers/index.qmd
+        - chapters/actions/index.qmd
+        - chapters/parameters/index.qmd
+        - chapters/launch-files/index.qmd
+
+    - part: chapters/ros2-implementation/index.qmd
+      chapters:
+        - chapters/writing-ros2-nodes-in-cpp/index.qmd
+        - chapters/writing-ros2-nodes-in-python/index.qmd
+        - chapters/creating-custom-messages/index.qmd
+        - chapters/using-ros2-libraries/index.qmd
+        - chapters/debugging-ros2-applications/index.qmd
+
+    - part: chapters/building-ros2-applications/index.qmd
+      chapters:
+        - chapters/robot-control-system/index.qmd
+        - chapters/sensor-data-processing-pipeline/index.qmd
+        - chapters/robot-perception-system/index.qmd
+        - chapters/human-robot-interaction-system/index.qmd
+
+    - part: chapters/contributing-to-ros2/index.qmd
+      chapters:
+        - chapters/getting-involved-in-the-community/index.qmd
+        - chapters/ros2-package-development/index.qmd
+        - chapters/best-practices-for-contributing/index.qmd
+        - chapters/contributing-to-existing-packages/index.qmd
+
+    - chapters/conclusion/index.qmd
+    - references.qmd
+bibliography: references.bib
+

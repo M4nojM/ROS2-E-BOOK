@@ -4,27 +4,6 @@
     "href": "index.html",
     "title": "ROS 2 : Mea Via et Mea Disciplina",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
-  },
-  {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
-    "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever."
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Preface\n\n\n\n\n\n\n\nNote\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is largely complete and just needs final proof reading. The complete version will be available here soon. Stay tuned!\n\n\n\nWelcome to my journey with ROS2! This e-book is a documentation of my and my friend Manoj Murali’s adventurous experience with ROS2 as intermediate learners. As the author of this book, I’m excited to share our journey with you, and I hope that our experiences will be useful for those who are new to ROS2 as well.\nYou can find Manoj Murali’s LinkedIn profile at https://www.linkedin.com/in/manoj-murali-/.\nAs two friends with a passion for robotics and automation, we decided to explore ROS2 as a way to build our skills and gain practical experience in the field. Along the way, we encountered many challenges, took risks, and learned valuable lessons that we want to share with others.\nIn this e-book, I’ll take you through our journey with ROS2, from the basics of getting started to more advanced topics like application development and contributing to the ROS2 community. I’ve organized the content in a way that I hope will be easy to follow, with plenty of examples and practical tips to help you along the way.\nWhether you’re a beginner just starting out with ROS2 or an intermediate learner looking to expand your skills, I hope that this e-book will be a valuable resource for you. So come along with us on our adventurous path with ROS2, and let’s explore the exciting world of robotics and automation together!"
   }
 ]
