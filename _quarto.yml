@@ -7,14 +7,50 @@ book:
   date: "4/5/2023"
   chapters:
     - index.qmd
+    - introduction-to-ros2.qmd
+   # - what-is-ros2.qmd
+   # - why-use-ros2.qmd
+   # - how-to-use-this-book.qmd
+   # - getting-started-with-ros2.qmd
+    - installation.qmd
+    - creating-a-workspace.qmd
+    - command-line-tools.qmd
+    - nodes.qmd
+    - topics.qmd
+    - messages.qmd
+    - services.qmd
+    - ros2-concepts.qmd
+    - publishers-and-subscribers.qmd
+    - clients-and-servers.qmd
+    - actions.qmd
+    - parameters.qmd
+    - launch-files.qmd
+    - ros2-implementation.qmd
+    - writing-ros2-nodes.qmd
+    - creating-custom-messages.qmd
+    - using-ros2-libraries.qmd
+    - debugging-ros2-applications.qmd
+    - robot-control-system.qmd
+    - sensor-data-processing-pipeline.qmd
+    - robot-perception-system.qmd
+    - human-robot-interaction-system.qmd
+    - contributing-to-ros2.qmd
+    - getting-involved-in-the-community.qmd
+    - ros2-package-development.qmd
+    - best-practices-for-contributing.qmd
+    - contributing-to-existing-packages.qmd
+    - conclusion.qmd
     - references.qmd
   cover-image: cover.png
+  favicon: cover.png
+  
 bibliography: references.bib
 
 format:
   html:
     theme:
       - cosmo
+    code-link: true
   pdf:
     documentclass: scrreprt
 

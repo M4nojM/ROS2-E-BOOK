@@ -4,6 +4,188 @@
     "href": "index.html",
     "title": "ROS 2 : Mea Via et Mea Disciplina",
     "section": "",
-    "text": "Preface\n\n\n\n\n\n\n\nNote\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is largely complete and just needs final proof reading. The complete version will be available here soon. Stay tuned!\n\n\n\nWelcome to my journey with ROS2! This e-book is a documentation of my and my friend Manoj Murali’s adventurous experience with ROS2 as intermediate learners. As the author of this book, I’m excited to share our journey with you, and I hope that our experiences will be useful for those who are new to ROS2 as well.\nYou can find Manoj Murali’s LinkedIn profile at https://www.linkedin.com/in/manoj-murali-/.\nAs two friends with a passion for robotics and automation, we decided to explore ROS2 as a way to build our skills and gain practical experience in the field. Along the way, we encountered many challenges, took risks, and learned valuable lessons that we want to share with others.\nIn this e-book, I’ll take you through our journey with ROS2, from the basics of getting started to more advanced topics like application development and contributing to the ROS2 community. I’ve organized the content in a way that I hope will be easy to follow, with plenty of examples and practical tips to help you along the way.\nWhether you’re a beginner just starting out with ROS2 or an intermediate learner looking to expand your skills, I hope that this e-book will be a valuable resource for you. So come along with us on our adventurous path with ROS2, and let’s explore the exciting world of robotics and automation together!"
+    "text": "Preface\nWelcome to my journey with ROS2! This e-book is a documentation of my and my friend Manoj Murali’s adventurous experience with ROS2 as intermediate learners. As the author of this book, I’m excited to share our journey with you, and I hope that our experiences will be useful for those who are new to ROS2 as well.\nYou can find Manoj Murali’s LinkedIn profile at https://www.linkedin.com/in/manoj-murali-/.\nAs two friends with a passion for robotics and automation, we decided to explore ROS2 as a way to build our skills and gain practical experience in the field. Along the way, we encountered many challenges, took risks, and learned valuable lessons that we want to share with others.\nIn this e-book, I’ll take you through our journey with ROS2, from the basics of getting started to more advanced topics like application development and contributing to the ROS2 community. I’ve organized the content in a way that I hope will be easy to follow, with plenty of examples and practical tips to help you along the way.\nWhether you’re a beginner just starting out with ROS2 or an intermediate learner looking to expand your skills, I hope that this e-book will be a valuable resource for you. So come along with us on our adventurous path with ROS2, and let’s explore the exciting world of robotics and automation together!"
+  },
+  {
+    "objectID": "installation.html",
+    "href": "installation.html",
+    "title": "2  Installation",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!\n\n\n\nWe recommand and use ROS2: humble (for now).\n\nUbuntuRHEL 8Windows\n\n\n\n2.0.1 Set Locale\n\nlocale  # check for UTF-8\n\nsudo apt update && sudo apt install locales\nsudo locale-gen en_US en_US.UTF-8\nsudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8\nexport LANG=en_US.UTF-8\n\nlocale  # verify settings\n\n\n2.0.2 Setup Sources\nsudo apt install software-properties-common\nsudo add-apt-repository universe\nsudo apt update && sudo apt install curl -y\nsudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg\necho \"deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main\" | sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null\n\n\n2.0.3 Install ROS2 packages\nsudo apt update\nsudo apt upgrade\nhere you have three options,\nsudo apt install ros-humble-desktop\nor\nsudo apt install ros-humble-ros-base\nor\nsudo apt install ros-humble-ros-dev-tools\n\n\n2.0.4 Environment setup\n# Replace \".bash\" with your shell if you're not using bash\n# Possible values are: setup.bash, setup.sh, setup.zsh\nsource /opt/ros/humble/setup.bash\n\n\n2.0.5 Uninstall\nsudo apt remove ~nros-humble-* && sudo apt autoremove\nsudo rm /etc/apt/sources.list.d/ros2.list\nsudo apt update\nsudo apt autoremove\n# Consider upgrading for packages previously shadowed.\nsudo apt upgrade\n\n\n\n\n2.0.6 Set Locale\nlocale  # check for UTF-8\n\nsudo dnf install langpacks-en glibc-langpack-en\nexport LANG=en_US.UTF-8\n\nlocale  # verify settings\n\n\n2.0.7 Setup Sources\nsudo dnf install 'dnf-command(config-manager)' epel-release -y\nsudo dnf config-manager --set-enabled powertools\n\n\n\n\n\n\nNote\n\n\n\nThis step may be slightly different depending on the distribution you are using. Check the EPEL documentation:https://docs.fedoraproject.org/en-US/epel/#_quickstart\n\n\nsudo dnf install curl\nsudo curl --output /etc/yum.repos.d/ros2.repo http://packages.ros.org/ros2/rhel/ros2.repo\nsudo dnf makecache\n\n\n2.0.8 Install ROS2 packages\nsudo dnf update\nsudo dnf install ros-humble-desktop\nor simply\nsudo dnf install ros-humble-ros-base\n\n\n2.0.9 Environment setup\n# Replace \".bash\" with your shell if you're not using bash\n# Possible values are: setup.bash, setup.sh, setup.zsh\nsource /opt/ros/humble/setup.bash\n\n\n2.0.10 Uninstall\nsudo dnf remove ros-humble-*\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nSorry, we dont do that here."
+  },
+  {
+    "objectID": "installation.html#rhel-8",
+    "href": "installation.html#rhel-8",
+    "title": "6  installation",
+    "section": "6.1 RHEL 8",
+    "text": "6.1 RHEL 8\n::: the red hat linux enterprise linux :::\n::::"
+  },
+  {
+    "objectID": "installation.html#sec-ubuntu",
+    "href": "installation.html#sec-ubuntu",
+    "title": "6  installation",
+    "section": "6.1 Ubuntu",
+    "text": "6.1 Ubuntu\n\n6.1.1 Set Locale\n\nlocale  # check for UTF-8\n\nsudo apt update && sudo apt install locales\nsudo locale-gen en_US en_US.UTF-8\nsudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8\nexport LANG=en_US.UTF-8\n\nlocale  # verify settings\n\n\n6.1.2 Setup Sources\nsudo apt install software-properties-common\nsudo add-apt-repository universe\nsudo apt update && sudo apt install curl -y\nsudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg\necho \"deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main\" | sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null\n\n\n6.1.3 Install ROS2 packages\nsudo apt update\nsudo apt upgrade\nhere you have three options,\nsudo apt install ros-humble-desktop\nor\nsudo apt install ros-humble-ros-base\nor\nsudo apt install ros-humble-ros-dev-tools\n\n\n6.1.4 Environment setup\n# Replace \".bash\" with your shell if you're not using bash\n# Possible values are: setup.bash, setup.sh, setup.zsh\nsource /opt/ros/humble/setup.bash\n\n\n6.1.5 Uninstall\nsudo apt remove ~nros-humble-* && sudo apt autoremove\nsudo rm /etc/apt/sources.list.d/ros2.list\nsudo apt update\nsudo apt autoremove\n# Consider upgrading for packages previously shadowed.\nsudo apt upgrade"
+  },
+  {
+    "objectID": "installation.html#sec-rhel-8",
+    "href": "installation.html#sec-rhel-8",
+    "title": "6  installation",
+    "section": "6.2 RHEL 8",
+    "text": "6.2 RHEL 8\n\n6.2.1 Set Locale\nlocale  # check for UTF-8\n\nsudo dnf install langpacks-en glibc-langpack-en\nexport LANG=en_US.UTF-8\n\nlocale  # verify settings\n\n\n6.2.2 Setup Sources\nsudo dnf install 'dnf-command(config-manager)' epel-release -y\nsudo dnf config-manager --set-enabled powertools\n\n\n\n\n\n\nNote\n\n\n\nThis step may be slightly different depending on the distribution you are using. Check the EPEL documentation:https://docs.fedoraproject.org/en-US/epel/#_quickstart\n\n\nsudo dnf install curl\nsudo curl --output /etc/yum.repos.d/ros2.repo http://packages.ros.org/ros2/rhel/ros2.repo\nsudo dnf makecache\n\n\n6.2.3 Install ROS2 packages\nsudo dnf update\nsudo dnf install ros-humble-desktop\nor simply\nsudo dnf install ros-humble-ros-base\n\n\n6.2.4 Environment setup\n# Replace \".bash\" with your shell if you're not using bash\n# Possible values are: setup.bash, setup.sh, setup.zsh\nsource /opt/ros/humble/setup.bash\n\n\n6.2.5 Uninstall\nsudo dnf remove ros-humble-*"
+  },
+  {
+    "objectID": "installation.html#windows",
+    "href": "installation.html#windows",
+    "title": "6  installation",
+    "section": "6.3 Windows",
+    "text": "6.3 Windows\n\nSorry, we dont do that here."
+  },
+  {
+    "objectID": "introduction-to-ros2.html",
+    "href": "introduction-to-ros2.html",
+    "title": "1  Introduction to ROS2",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!\n\n\n\nROS (Robot Operating System) was first released by Open Robotics in 2007 as a set of software libraries and tools for building robot applications. At the core of a ROS system are independent nodes that communicate with each other using a publish/subscribe messaging platform. For example, a sensor’s driver could be implemented as a node that publishes sensor data, and this data can be read by any number of other nodes, such as filters, loggers, mapping, and navigation nodes. What’s great about ROS is that these nodes can be on different systems or used by different architectures, making it flexible and adaptable to users’ needs.\nROS 2 is the next version of ROS and includes many of the same components and tools as its predecessor, but also adds new features like an improved communication stack with real-time data distribution service (DDS) protocol, support for multiple DDS implementations, and DDS security support. It also offers improved logging capabilities, ability to configure QoS at startup, improved rosbag2 performance, and more. ROS 2 is designed to be scalable, efficient, and secure, making it a great choice for building robotic applications."
+  },
+  {
+    "objectID": "creating-a-workspace.html",
+    "href": "creating-a-workspace.html",
+    "title": "3  Creating Workspace",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!\n\n\n\nA ROS package is developed in a controlled environment called workspace.\nTo create a workspace, use the following command to create the directories required,\n# mkdir -p &lt;workspace-name&gt;/src\nmkdir -p ros2_ws/src"
+  },
+  {
+    "objectID": "installation.html#set-locale",
+    "href": "installation.html#set-locale",
+    "title": "2  Installation",
+    "section": "2.1 Set Locale",
+    "text": "2.1 Set Locale\n\nlocale  # check for UTF-8\n\nsudo apt update && sudo apt install locales\nsudo locale-gen en_US en_US.UTF-8\nsudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8\nexport LANG=en_US.UTF-8\n\nlocale  # verify settings"
+  },
+  {
+    "objectID": "installation.html#setup-sources",
+    "href": "installation.html#setup-sources",
+    "title": "2  Installation",
+    "section": "2.2 Setup Sources",
+    "text": "2.2 Setup Sources\nsudo apt install software-properties-common\nsudo add-apt-repository universe\nsudo apt update && sudo apt install curl -y\nsudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg\necho \"deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main\" | sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null"
+  },
+  {
+    "objectID": "installation.html#install-ros2-packages",
+    "href": "installation.html#install-ros2-packages",
+    "title": "2  Installation",
+    "section": "2.3 Install ROS2 packages",
+    "text": "2.3 Install ROS2 packages\nsudo apt update\nsudo apt upgrade\nhere you have three options,\nsudo apt install ros-humble-desktop\nor\nsudo apt install ros-humble-ros-base\nor\nsudo apt install ros-humble-ros-dev-tools"
+  },
+  {
+    "objectID": "installation.html#environment-setup",
+    "href": "installation.html#environment-setup",
+    "title": "2  Installation",
+    "section": "2.4 Environment setup",
+    "text": "2.4 Environment setup\n# Replace \".bash\" with your shell if you're not using bash\n# Possible values are: setup.bash, setup.sh, setup.zsh\nsource /opt/ros/humble/setup.bash"
+  },
+  {
+    "objectID": "installation.html#uninstall",
+    "href": "installation.html#uninstall",
+    "title": "2  Installation",
+    "section": "2.5 Uninstall",
+    "text": "2.5 Uninstall\nsudo apt remove ~nros-humble-* && sudo apt autoremove\nsudo rm /etc/apt/sources.list.d/ros2.list\nsudo apt update\nsudo apt autoremove\n# Consider upgrading for packages previously shadowed.\nsudo apt upgrade"
+  },
+  {
+    "objectID": "installation.html#set-locale-1",
+    "href": "installation.html#set-locale-1",
+    "title": "2  Installation",
+    "section": "2.6 Set Locale",
+    "text": "2.6 Set Locale\nlocale  # check for UTF-8\n\nsudo dnf install langpacks-en glibc-langpack-en\nexport LANG=en_US.UTF-8\n\nlocale  # verify settings"
+  },
+  {
+    "objectID": "installation.html#setup-sources-1",
+    "href": "installation.html#setup-sources-1",
+    "title": "2  Installation",
+    "section": "2.7 Setup Sources",
+    "text": "2.7 Setup Sources\nsudo dnf install 'dnf-command(config-manager)' epel-release -y\nsudo dnf config-manager --set-enabled powertools\n\n\n\n\n\n\nNote\n\n\n\nThis step may be slightly different depending on the distribution you are using. Check the EPEL documentation:https://docs.fedoraproject.org/en-US/epel/#_quickstart\n\n\nsudo dnf install curl\nsudo curl --output /etc/yum.repos.d/ros2.repo http://packages.ros.org/ros2/rhel/ros2.repo\nsudo dnf makecache"
+  },
+  {
+    "objectID": "installation.html#install-ros2-packages-1",
+    "href": "installation.html#install-ros2-packages-1",
+    "title": "2  Installation",
+    "section": "2.8 Install ROS2 packages",
+    "text": "2.8 Install ROS2 packages\nsudo dnf update\nsudo dnf install ros-humble-desktop\nor simply\nsudo dnf install ros-humble-ros-base"
+  },
+  {
+    "objectID": "installation.html#environment-setup-1",
+    "href": "installation.html#environment-setup-1",
+    "title": "2  Installation",
+    "section": "2.9 Environment setup",
+    "text": "2.9 Environment setup\n# Replace \".bash\" with your shell if you're not using bash\n# Possible values are: setup.bash, setup.sh, setup.zsh\nsource /opt/ros/humble/setup.bash"
+  },
+  {
+    "objectID": "installation.html#uninstall-1",
+    "href": "installation.html#uninstall-1",
+    "title": "2  Installation",
+    "section": "2.10 Uninstall",
+    "text": "2.10 Uninstall\nsudo dnf remove ros-humble-*"
+  },
+  {
+    "objectID": "creating-a-workspace.html#sourcing-the-binaries",
+    "href": "creating-a-workspace.html#sourcing-the-binaries",
+    "title": "3  Creating Workspace",
+    "section": "3.1 Sourcing the binaries",
+    "text": "3.1 Sourcing the binaries\nBy default, when you install ROS2, it does not source its binaries automatically. This means that you will need to manually source the setup file to use the ROS2 binaries.\nThere are several reasons why ROS2 doesn’t source its binaries by default:\n\n3.1.1 Isolation:\nROS2 supports multiple installations of itself and its dependencies, so not sourcing the binaries by default allows for better isolation between different installations. This means that you can have multiple ROS2 installations on the same machine without them interfering with each other.\n\n\n3.1.2 Flexibility:\nBy not sourcing the binaries by default, ROS2 allows you to choose which version of the software to use for each terminal session. This is useful when working on different projects that require different versions of ROS2.\n\n\n3.1.3 Avoiding conflicts:\nSourcing the binaries by default can cause conflicts with other software installed on your machine that may use the same environment variables.\nIn summary, not sourcing the binaries by default in ROS2 allows for better isolation, flexibility, and avoids conflicts with other software on your machine. However, it does require a manual step to set up each terminal session to use ROS2, which can be seen as a minor inconvenience.\n\n\n\n\n\n\nA workaround\n\n\n\nThis can be advantageous when you want to work on multiple projects that require you to install multiple distros.\nCreating a shortcut would be helpful. Here is how,\nStep 1: Create a file in your home directory,\ntouch ~/.ros2_config\nStep 2: Edit ~/.bashrc and ~/.ros2_config\necho \"alias shumble=\"source ~/.ros2_config\"\" &gt;&gt; ~/.bashrc\necho \"source /opt/ros/humble/setup.bash\"\" &gt; ~/.bashrc\nIt is advisable to edit the ~/.bashrc as less as possible, so that reducing the risk of misconfiguring the vital configurations in the ~/.bashrc\nYou can now twerk ~/.ros2_config to change any ros related settings, while it being isolated from other configurations."
+  },
+  {
+    "objectID": "command-line-tools.html",
+    "href": "command-line-tools.html",
+    "title": "4  Command line tools",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!\n\n\n\n\n\n\n\n\n\n\nCommands\nShort description\n\n\n\n\nros2 run\nRun a ROS2 node from a package.\n\n\nros2 node\nInteract with a running ROS2 node.\n\n\nros2 topic\nInteract with ROS2 topics.\n\n\nros2 service\nInteract with ROS2 services.\n\n\nros2 param\nInteract with ROS2 parameters.\n\n\nros2 bag\nRecord and play back ROS2 messages.\n\n\nros2 launch\nLaunch multiple nodes at once.\n\n\nros2 interface\nInteract with ROS2 interfaces.\n\n\nros2 pkg\nManage ROS2 packages.\n\n\nros2 pkg create\nCreate a new ROS2 package.\n\n\nros2 pkg list\nList available ROS2 packages.\n\n\nros2 pkg create –build-type ament_cmake\nCreate a new ROS2 package with the Ament CMake build system.\n\n\nros2 pkg create –build-type ament_python\nCreate a new ROS2 package with the Ament Python build system.\n\n\n\n\n\n\n\n\n\nExpand To Learn More About “ros2 pkg create”\n\n\n\n\n\n\n\n\n\n\n\n\nCommands\nShort description\n\n\n\n\nros2 pkg create –build-type ament_lint\nCreate a new ROS2 package with the Ament Lint build system.\n\n\nros2 pkg create –build-type ament_cmake_pytest\nCreate a new ROS2 package with the Ament CMake Pytest build system.\n\n\nros2 pkg create –build-type ament_cmake_gtest\nCreate a new ROS2 package with the Ament CMake Gtest build system.\n\n\nros2 pkg create –build-type colcon\nCreate a new ROS2 package with the Colcon build system.\n\n\nros2 pkg create –build-type colcon-python\nCreate a new ROS2 package with the Colcon Python build system.\n\n\nros2 pkg create –build-type colcon-cmake\nCreate a new ROS2 package with the Colcon CMake build system.\n\n\nros2 pkg create –build-type colcon-ros\nCreate a new ROS2 package with the Colcon ROS build system.\n\n\nros2 pkg create –build-type colcon-ros-python\nCreate a new ROS2 package with the Colcon ROS Python build system.\n\n\nros2 pkg create –build-type colcon-ros-cmake\nCreate a new ROS2 package with the Colcon ROS CMake build system.\n\n\nros2 pkg create –build-type ament_cmake_ros\nCreate a new ROS2 package with the Ament CMake ROS build system.\n\n\nros2 pkg create –build-type ament_cmake_python\nCreate a new ROS2 package with the Ament CMake Python build system.\n\n\nros2 pkg create –build-type ament_cmake_lint\nCreate a new ROS2 package with the Ament CMake Lint build system.\n\n\nros2 pkg create –build-type ament_cmake_pytest_coverage\nCreate a new ROS2 package with the Ament CMake Pytest Coverage build system.\n\n\nros2 pkg create –build-type ament_cmake_ros_testing\nCreate a new ROS2 package with the Ament CMake ROS Testing build system.\n\n\nros2 pkg create –build-type ament_cmake_flake8\nCreate a new ROS2 package with the Ament CMake Flake8 build system.\n\n\nros2 pkg create –build-type ament_cmake_mypy\nCreate a new ROS2 package with the Ament CMake MyPy build system.\n\n\nros2 pkg create –build-type ament_cmake_pep257\nCreate a new ROS2 package with"
+  },
+  {
+    "objectID": "nodes.html",
+    "href": "nodes.html",
+    "title": "5  Nodes",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!\n\n\n\nIn ROS2, a node is the fundamental unit of computation that performs a specific task in a robotic system. It is a process that communicates with other nodes in the system through topics, services, and parameters.\n\n\n\nSource ros.org\n\n\nNodes are often designed to perform a single function or task, such as reading data from a sensor, processing that data, or controlling an actuator. Nodes can be written in a variety of programming languages, including C++, Python, and others.\nNodes communicate with each other by publishing and subscribing to topics. A topic is a named bus over which nodes can send and receive messages. When a node publishes a message to a topic, all other nodes that are subscribed to that topic will receive the message.\nNodes can also provide and consume services. A service is a named request/response pair of messages that a node can use to get or set information or perform a specific action. A node that provides a service listens for requests, performs the requested action, and sends back a response.\nNodes can also use parameters to store and retrieve configuration data. A parameter is a named value that can be set and read by nodes in the system. Parameters can be used to configure a node’s behavior or to store information such as calibration data.\nIn summary, nodes are the building blocks of a ROS2 system, and they communicate with each other through topics, services, and parameters. Each node performs a specific function or task, and together they form a distributed system that can be used to control robots or other complex systems."
+  },
+  {
+    "objectID": "topics.html",
+    "href": "topics.html",
+    "title": "6  Topic",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!\n\n\n\nIn ROS2, a topic is a named bus over which nodes can send and receive messages. Topics are used for asynchronous communication between nodes, allowing them to exchange data without needing to know anything about each other’s internal workings.\nEach topic has a unique name, which is used by nodes to identify the topic they want to communicate on. Nodes can publish messages to a topic or subscribe to a topic to receive messages. When a node publishes a message to a topic, all other nodes that are subscribed to that topic will receive the message. 1 Messages sent over a topic can be of any type, as long as they are defined in the same message package and have the same message name. For example, a sensor node might publish messages containing sensor readings, while a control node might subscribe to those messages and use the data to control a robot’s movements.\nROS2 uses a publisher-subscriber model for topic communication. Publishers are nodes that send messages to a topic, while subscribers are nodes that receive messages from a topic. Nodes can publish and subscribe to multiple topics at the same time, allowing for complex communication patterns between nodes.\nROS2 topics are an important part of building a distributed robotic system, as they allow nodes to communicate in a decoupled manner. By using topics, nodes can exchange data without needing to know anything about each other’s internal workings, making it easier to build complex robotic systems out of smaller, specialized components."
+  },
+  {
+    "objectID": "messages.html",
+    "href": "messages.html",
+    "title": "7  Messages",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!\n\n\n\nIn ROS2, messages are the basic units of data that are exchanged between nodes over topics. A message is a data structure that is defined in a message package and contains information about a specific topic.\nMessages can be of any type, as long as they are defined in the same message package and have the same message name. For example, a message might contain information about a robot’s position and orientation, or about a sensor reading such as temperature or distance.\nROS2 messages are typically defined using the ROS2 interface description language (IDL), which is a language-agnostic way of describing data structures. This makes it possible to define messages in a variety of programming languages, including C++, Python, and others.\nWhen a node publishes a message to a topic, it sends the message data over the network to all nodes that are subscribed to that topic. Each subscribed node can then receive the message and process the data as needed.\nMessages are a key component of building a distributed robotic system, as they allow nodes to communicate with each other in a decoupled manner. By defining messages that describe specific pieces of data, nodes can exchange information without needing to know anything about each other’s internal workings. This makes it easier to build complex robotic systems out of smaller, specialized components.\nIn summary, messages in ROS2 are the basic units of data that are exchanged between nodes over topics. They are defined using a language-agnostic data structure description language and can be of any type. Messages allow nodes to communicate in a decoupled manner, which is essential for building complex robotic systems out of smaller, specialized components."
+  },
+  {
+    "objectID": "services.html",
+    "href": "services.html",
+    "title": "8  Services",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!\n\n\n\nROS2, services are a way for nodes to request a specific operation from another node and receive a response. Services are similar to topics, but instead of sending and receiving messages, nodes send requests and receive responses.\nServices are defined using a service description file that specifies the name of the service, the types of the request and response messages, and any necessary parameters or options. The service definition is used to generate code that can be used by nodes to implement or use the service.\nWhen a node wants to use a service, it sends a request message to the node that provides the service. The service provider receives the request message, performs the requested operation, and sends a response message back to the requester. Once the response is received, the requester can continue with its operation.\nServices are typically used for operations that require a direct response, such as configuring a sensor, performing a calculation, or sending a command to a robot. Unlike topics, services are synchronous, meaning that the requester will block until it receives a response from the service provider.\nIn ROS2, services are an important part of building distributed robotic systems, as they allow nodes to request specific operations from other nodes and receive a response. By using services, nodes can communicate in a decoupled manner and perform complex operations without needing to know anything about each other’s internal workings.\nIn summary, services in ROS2 are a way for nodes to request a specific operation from another node and receive a response. Services are defined using a service description file and are used for operations that require a direct response. Services are an important part of building distributed robotic systems, as they allow nodes to communicate in a decoupled manner and perform complex operations without needing to know anything about each other’s internal workings."
+  },
+  {
+    "objectID": "ros2-concepts.html",
+    "href": "ros2-concepts.html",
+    "title": "9  Ros2 Concepts",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!\n\n\n\n\n\n\n\n\n\n\nROS2-Concept\nDescription\n\n\n\n\nNodes\nA node is a process that performs a specific task, such as sensing or actuating. Nodes can communicate with each other by sending and receiving messages over topics.\n\n\nTopics\nA topic is a named bus over which nodes can publish and subscribe to messages. Topics are used for one-to-many communication.\n\n\nServices\nA service is a request-response communication model between nodes. A node can make a request to a service and receive a response from it.\n\n\nActions\nActions are similar to services, but they allow for more complex communication patterns, such as canceling a request or providing feedback during the execution of a request.\n\n\nParameters\nParameters are key-value pairs that can be used to configure nodes and their behavior.\n\n\nLaunch files\nA launch file is an XML file that specifies how to start multiple nodes with their respective parameters and configurations.\n\n\nRQT\nRQT is a collection of ROS graphical tools for debugging, monitoring, and visualizing ROS topics, nodes, and messages.\n\n\nRViz\nRViz is a 3D visualization tool for ROS that allows users to display and interact with sensor data and robot models in real-time.\n\n\ntf2\ntf2 is a library for keeping track of coordinate frames over time. It provides a way to transform data between different coordinate frames in a robot system.\n\n\nROS2 Middleware\nROS2 Middleware is the layer of software that provides the communication infrastructure between nodes. ROS2 provides multiple middleware options, such as Fast RTPS and Cyclone DDS."
+  },
+  {
+    "objectID": "robot-control-system.html",
+    "href": "robot-control-system.html",
+    "title": "ROS 2 : Mea Via et Mea Disciplina ",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"
+  },
+  {
+    "objectID": "publishers-and-subscribers.html",
+    "href": "publishers-and-subscribers.html",
+    "title": "ROS 2 : Mea Via et Mea Disciplina ",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"
   }
 ]

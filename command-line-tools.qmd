@@ -1,0 +1,47 @@
+# Command line tools
+```{r}
+#| results: "asis"
+#| echo: false
+source("_common.R")
+status("drafting")
+```
+
+| Commands | Short description |
+|----------|:------------------|
+|     ros2 run| Run a ROS2 node from a package.
+|    ros2 node| Interact with a running ROS2 node.
+|   ros2 topic| Interact with ROS2 topics.
+|   ros2 service| Interact with ROS2 services.
+|   ros2 param| Interact with ROS2 parameters.
+|   ros2 bag| Record and play back ROS2 messages.
+|   ros2 launch| Launch multiple nodes at once.
+|   ros2 interface| Interact with ROS2 interfaces.
+|   ros2 pkg| Manage ROS2 packages.
+|   ros2 pkg create| Create a new ROS2 package.
+|   ros2 pkg list| List available ROS2 packages.
+|   ros2 pkg create --build-type ament_cmake| Create a new ROS2 package with the Ament CMake build system.
+|   ros2 pkg create --build-type ament_python| Create a new ROS2 package with the Ament Python build system.
+
+
+::: {.callout-note    collapse="true"}
+## Expand To Learn More About **"ros2 pkg create"**
+| Commands | Short description |
+|----------|:------------------|
+|   ros2 pkg create --build-type ament_lint| Create a new ROS2 package with the Ament Lint build system.
+|   ros2 pkg create --build-type ament_cmake_pytest| Create a new ROS2 package with the Ament CMake Pytest build system.
+|   ros2 pkg create --build-type ament_cmake_gtest| Create a new ROS2 package with the Ament CMake Gtest build system.
+|   ros2 pkg create --build-type colcon| Create a new ROS2 package with the Colcon build system.
+|   ros2 pkg create --build-type colcon-python| Create a new ROS2 package with the Colcon Python build system.
+|   ros2 pkg create --build-type colcon-cmake| Create a new ROS2 package with the Colcon CMake build system.
+|   ros2 pkg create --build-type colcon-ros| Create a new ROS2 package with the Colcon ROS build system.
+|   ros2 pkg create --build-type colcon-ros-python| Create a new ROS2 package with the Colcon ROS Python build system.
+|   ros2 pkg create --build-type colcon-ros-cmake| Create a new ROS2 package with the Colcon ROS CMake build system.
+|   ros2 pkg create --build-type ament_cmake_ros| Create a new ROS2 package with the Ament CMake ROS build system.
+|   ros2 pkg create --build-type ament_cmake_python| Create a new ROS2 package with the Ament CMake Python build system.
+|   ros2 pkg create --build-type ament_cmake_lint| Create a new ROS2 package with the Ament CMake Lint build system.
+|   ros2 pkg create --build-type ament_cmake_pytest_coverage| Create a new ROS2 package with the Ament CMake Pytest Coverage build system.
+|   ros2 pkg create --build-type ament_cmake_ros_testing| Create a new ROS2 package with the Ament CMake ROS Testing build system.
+|   ros2 pkg create --build-type ament_cmake_flake8| Create a new ROS2 package with the Ament CMake Flake8 build system.
+|   ros2 pkg create --build-type ament_cmake_mypy| Create a new ROS2 package with the Ament CMake MyPy build system.
+|   ros2 pkg create --build-type ament_cmake_pep257| Create a new ROS2 package with
+:::

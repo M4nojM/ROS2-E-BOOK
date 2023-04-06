@@ -1,0 +1,20 @@
+# Messages
+```{r}
+#| results: "asis"
+#| echo: false
+source("_common.R")
+status("drafting")
+```
+
+
+In ROS2, messages are the basic units of data that are exchanged between nodes over topics. A message is a data structure that is defined in a message package and contains information about a specific topic.
+
+Messages can be of any type, as long as they are defined in the same message package and have the same message name. For example, a message might contain information about a robot's position and orientation, or about a sensor reading such as temperature or distance.
+
+ROS2 messages are typically defined using the ROS2 interface description language (IDL), which is a language-agnostic way of describing data structures. This makes it possible to define messages in a variety of programming languages, including C++, Python, and others.
+
+When a node publishes a message to a topic, it sends the message data over the network to all nodes that are subscribed to that topic. Each subscribed node can then receive the message and process the data as needed.
+
+Messages are a key component of building a distributed robotic system, as they allow nodes to communicate with each other in a decoupled manner. By defining messages that describe specific pieces of data, nodes can exchange information without needing to know anything about each other's internal workings. This makes it easier to build complex robotic systems out of smaller, specialized components.
+
+In summary, messages in ROS2 are the basic units of data that are exchanged between nodes over topics. They are defined using a language-agnostic data structure description language and can be of any type. Messages allow nodes to communicate in a decoupled manner, which is essential for building complex robotic systems out of smaller, specialized components.

@@ -1,0 +1,18 @@
+# Topic
+```{r}
+#| results: "asis"
+#| echo: false
+source("_common.R")
+status("drafting")
+```
+
+
+In ROS2, a topic is a named bus over which nodes can send and receive messages. Topics are used for asynchronous communication between nodes, allowing them to exchange data without needing to know anything about each other's internal workings.
+
+Each topic has a unique name, which is used by nodes to identify the topic they want to communicate on. Nodes can publish messages to a topic or subscribe to a topic to receive messages. When a node publishes a message to a topic, all other nodes that are subscribed to that topic will receive the message.
+![Source [ros.org](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html)](images/topic.gif)1
+Messages sent over a topic can be of any type, as long as they are defined in the same message package and have the same message name. For example, a sensor node might publish messages containing sensor readings, while a control node might subscribe to those messages and use the data to control a robot's movements.
+
+ROS2 uses a publisher-subscriber model for topic communication. Publishers are nodes that send messages to a topic, while subscribers are nodes that receive messages from a topic. Nodes can publish and subscribe to multiple topics at the same time, allowing for complex communication patterns between nodes.
+
+ROS2 topics are an important part of building a distributed robotic system, as they allow nodes to communicate in a decoupled manner. By using topics, nodes can exchange data without needing to know anything about each other's internal workings, making it easier to build complex robotic systems out of smaller, specialized components.

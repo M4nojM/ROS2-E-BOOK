@@ -1,11 +1,5 @@
 # Preface {.unnumbered}
 
-```{r}
-#| results: "asis"
-#| echo: false
-source("_common.R")
-status("complete")
-```
 Welcome to my journey with ROS2! This e-book is a documentation of my and my friend Manoj Murali's adventurous experience with ROS2 as intermediate learners. As the author of this book, I'm excited to share our journey with you, and I hope that our experiences will be useful for those who are new to ROS2 as well.
 
 You can find Manoj Murali's LinkedIn profile at [ https://www.linkedin.com/in/manoj-murali-/]( https://www.linkedin.com/in/manoj-murali-/).

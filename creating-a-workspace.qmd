@@ -1,0 +1,53 @@
+# Creating Workspace
+```{r}
+#| results: "asis"
+#| echo: false
+source("_common.R")
+status("drafting")
+```
+
+
+A ROS package is developed in a controlled environment called workspace.
+
+To create a workspace, use the following command to create the directories required,
+```{.bash}
+# mkdir -p <workspace-name>/src
+mkdir -p ros2_ws/src
+```
+## Sourcing the binaries
+By default, when you install ROS2, it does not source its binaries automatically. This means that you will need to manually source the setup file to use the ROS2 binaries.
+
+There are several reasons why ROS2 doesn't source its binaries by default:
+
+###  Isolation:
+ ROS2 supports multiple installations of itself and its dependencies, so not sourcing the binaries by default allows for better isolation between different installations. This means that you can have multiple ROS2 installations on the same machine without them interfering with each other.
+
+### Flexibility:
+By not sourcing the binaries by default, ROS2 allows you to choose which version of the software to use for each terminal session. This is useful when working on different projects that require different versions of ROS2.
+
+### Avoiding conflicts:
+Sourcing the binaries by default can cause conflicts with other software installed on your machine that may use the same environment variables.
+
+In summary, not sourcing the binaries by default in ROS2 allows for better isolation, flexibility, and avoids conflicts with other software on your machine. However, it does require a manual step to set up each terminal session to use ROS2, which can be seen as a minor inconvenience.
+
+:::{.callout-tip title="A workaround"}
+This can be advantageous when you want to work on multiple projects that require you to install multiple distros.
+
+Creating a shortcut would be helpful.
+Here is how,
+
+**Step 1**: Create a file in your home directory,
+```{.bash}
+touch ~/.ros2_config
+```
+
+**Step 2**: Edit ~/.bashrc and ~/.ros2_config
+```{.bash}
+echo "alias shumble="source ~/.ros2_config"" >> ~/.bashrc
+echo "source /opt/ros/humble/setup.bash"" > ~/.bashrc
+```
+It is advisable to edit the ~/.bashrc as less as possible, so that reducing the risk of misconfiguring the vital configurations in the ~/.bashrc 
+
+You can now twerk ~/.ros2_config to change any ros related settings, while it being isolated from other configurations.
+:::
+

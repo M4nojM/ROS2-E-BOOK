@@ -1,0 +1,23 @@
+# Nodes
+```{r}
+#| results: "asis"
+#| echo: false
+source("_common.R")
+status("drafting")
+```
+
+
+In ROS2, a node is the fundamental unit of computation that performs a specific task in a robotic system. It is a process that communicates with other nodes in the system through topics, services, and parameters.
+
+![Source [ros.org](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html)](images/nodes.gif)
+
+Nodes are often designed to perform a single function or task, such as reading data from a sensor, processing that data, or controlling an actuator. Nodes can be written in a variety of programming languages, including C++, Python, and others.
+
+Nodes communicate with each other by publishing and subscribing to topics. A topic is a named bus over which nodes can send and receive messages. When a node publishes a message to a topic, all other nodes that are subscribed to that topic will receive the message.
+
+Nodes can also provide and consume services. A service is a named request/response pair of messages that a node can use to get or set information or perform a specific action. A node that provides a service listens for requests, performs the requested action, and sends back a response.
+
+Nodes can also use parameters to store and retrieve configuration data. A parameter is a named value that can be set and read by nodes in the system. Parameters can be used to configure a node's behavior or to store information such as calibration data.
+
+In summary, nodes are the building blocks of a ROS2 system, and they communicate with each other through topics, services, and parameters. Each node performs a specific function or task, and together they form a distributed system that can be used to control robots or other complex systems.
+

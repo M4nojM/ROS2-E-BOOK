@@ -1,0 +1,127 @@
+```{r}
+#| results: "asis"
+#| echo: false
+source("_common.R")
+status("drafting")
+```
+
+
+# Installation 
+
+We recommand and use ROS2: humble (for now).
+
+::::{.panel-tabset}
+
+# Ubuntu {#sec-ubuntu}
+
+## Set Locale
+```{.bash }
+
+locale  # check for UTF-8
+
+sudo apt update && sudo apt install locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+locale  # verify settings
+
+```
+## Setup Sources
+
+```{.bash}
+sudo apt install software-properties-common
+sudo add-apt-repository universe
+sudo apt update && sudo apt install curl -y
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+```
+
+## Install ROS2 packages
+```{.bash}
+sudo apt update
+sudo apt upgrade
+
+```
+here you have three options,
+
+```{.bash}
+sudo apt install ros-humble-desktop
+
+```
+or
+
+```{.bash}
+sudo apt install ros-humble-ros-base
+```
+or
+```{.bash}
+sudo apt install ros-humble-ros-dev-tools
+```
+## Environment setup
+```{.bash}
+# Replace ".bash" with your shell if you're not using bash
+# Possible values are: setup.bash, setup.sh, setup.zsh
+source /opt/ros/humble/setup.bash
+```
+## Uninstall
+```{.bash}
+sudo apt remove ~nros-humble-* && sudo apt autoremove
+sudo rm /etc/apt/sources.list.d/ros2.list
+sudo apt update
+sudo apt autoremove
+# Consider upgrading for packages previously shadowed.
+sudo apt upgrade
+```
+
+# RHEL 8 {#sec-rhel-8}
+ 
+## Set Locale
+
+```{.bash}
+locale  # check for UTF-8
+
+sudo dnf install langpacks-en glibc-langpack-en
+export LANG=en_US.UTF-8
+
+locale  # verify settings
+```
+
+## Setup Sources
+```{.bash}
+sudo dnf install 'dnf-command(config-manager)' epel-release -y
+sudo dnf config-manager --set-enabled powertools
+```
+:::{.callout-note}
+This step may be slightly different depending on the distribution you are using. Check the EPEL documentation:[https://docs.fedoraproject.org/en-US/epel/#_quickstart](https://docs.fedoraproject.org/en-US/epel/#_quickstart)
+:::
+```{.bash}
+sudo dnf install curl
+sudo curl --output /etc/yum.repos.d/ros2.repo http://packages.ros.org/ros2/rhel/ros2.repo
+sudo dnf makecache
+```
+## Install ROS2 packages
+```{.bash}
+sudo dnf update
+sudo dnf install ros-humble-desktop
+```
+or simply
+```{.bash}
+sudo dnf install ros-humble-ros-base
+```
+## Environment setup
+```{.bash}
+# Replace ".bash" with your shell if you're not using bash
+# Possible values are: setup.bash, setup.sh, setup.zsh
+source /opt/ros/humble/setup.bash
+```
+## Uninstall
+```{.bash}
+sudo dnf remove ros-humble-*
+```
+
+# Windows
+:::{.callout-caution}
+Sorry,  we dont do that here, although it is quite possible with ros2
+:::
+::::

@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Rishikesavan Ramesh, Manoj Murali">
-<meta name="dcterms.date" content="2023-04-05">
 
-<title>ROS 2 : Mea Via et Mea Disciplina</title>
+<title>ROS 2 : Mea Via et Mea Disciplina - 3&nbsp; Creating Workspace</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -32,7 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./introduction-to-ros2.html" rel="next">
+<link href="./command-line-tools.html" rel="next">
+<link href="./installation.html" rel="prev">
 <link href="./cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -75,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./creating-a-workspace.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Creating Workspace</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -102,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -120,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./creating-a-workspace.html" class="sidebar-item-text sidebar-link">
+  <a href="./creating-a-workspace.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Creating Workspace</span></span></a>
   </div>
 </li>
@@ -151,13 +184,13 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./services.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Services</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">services.html</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ros2-concepts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ros2 Concepts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ros2-concepts.html</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -296,7 +329,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#sourcing-the-binaries" id="toc-sourcing-the-binaries" class="nav-link active" data-scroll-target="#sourcing-the-binaries"><span class="header-section-number">3.1</span> Sourcing the binaries</a>
+  <ul class="collapse">
+  <li><a href="#isolation" id="toc-isolation" class="nav-link" data-scroll-target="#isolation"><span class="header-section-number">3.1.1</span> Isolation:</a></li>
+  <li><a href="#flexibility" id="toc-flexibility" class="nav-link" data-scroll-target="#flexibility"><span class="header-section-number">3.1.2</span> Flexibility:</a></li>
+  <li><a href="#avoiding-conflicts" id="toc-avoiding-conflicts" class="nav-link" data-scroll-target="#avoiding-conflicts"><span class="header-section-number">3.1.3</span> Avoiding conflicts:</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -305,26 +343,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">ROS 2 : Mea Via et Mea Disciplina</h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Creating Workspace</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Rishikesavan Ramesh, Manoj Murali </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 5, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -332,16 +358,65 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<div class="status">
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!</p>
+</div>
+</div>
+</div>
+<p>A ROS package is developed in a controlled environment called workspace.</p>
+<p>To create a workspace, use the following command to create the directories required,</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mkdir -p &lt;workspace-name&gt;/src</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ros2_ws/src</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="sourcing-the-binaries" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sourcing-the-binaries"><span class="header-section-number">3.1</span> Sourcing the binaries</h2>
+<p>By default, when you install ROS2, it does not source its binaries automatically. This means that you will need to manually source the setup file to use the ROS2 binaries.</p>
+<p>There are several reasons why ROS2 doesn’t source its binaries by default:</p>
+<section id="isolation" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="isolation"><span class="header-section-number">3.1.1</span> Isolation:</h3>
+<p>ROS2 supports multiple installations of itself and its dependencies, so not sourcing the binaries by default allows for better isolation between different installations. This means that you can have multiple ROS2 installations on the same machine without them interfering with each other.</p>
+</section>
+<section id="flexibility" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="flexibility"><span class="header-section-number">3.1.2</span> Flexibility:</h3>
+<p>By not sourcing the binaries by default, ROS2 allows you to choose which version of the software to use for each terminal session. This is useful when working on different projects that require different versions of ROS2.</p>
+</section>
+<section id="avoiding-conflicts" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="avoiding-conflicts"><span class="header-section-number">3.1.3</span> Avoiding conflicts:</h3>
+<p>Sourcing the binaries by default can cause conflicts with other software installed on your machine that may use the same environment variables.</p>
+<p>In summary, not sourcing the binaries by default in ROS2 allows for better isolation, flexibility, and avoids conflicts with other software on your machine. However, it does require a manual step to set up each terminal session to use ROS2, which can be seen as a minor inconvenience.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="A workaround">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+A workaround
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This can be advantageous when you want to work on multiple projects that require you to install multiple distros.</p>
+<p>Creating a shortcut would be helpful. Here is how,</p>
+<p><strong>Step 1</strong>: Create a file in your home directory,</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> ~/.ros2_config</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Step 2</strong>: Edit ~/.bashrc and ~/.ros2_config</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"alias shumble="</span>source ~/.ros2_config<span class="st">""</span> <span class="op">&gt;&gt;</span> ~/.bashrc</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"source /opt/ros/humble/setup.bash"" &gt; ~/.bashrc</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>It is advisable to edit the ~/.bashrc as less as possible, so that reducing the risk of misconfiguring the vital configurations in the ~/.bashrc</p>
+<p>You can now twerk ~/.ros2_config to change any ros related settings, while it being isolated from other configurations.</p>
+</div>
+</div>
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1><p><img src="cover.png" title="ROS 2 : Mea Via et Mea Disciplina" class="quarto-cover-image img-fluid"></p>
-<p>Welcome to my journey with ROS2! This e-book is a documentation of my and my friend Manoj Murali’s adventurous experience with ROS2 as intermediate learners. As the author of this book, I’m excited to share our journey with you, and I hope that our experiences will be useful for those who are new to ROS2 as well.</p>
-<p>You can find Manoj Murali’s LinkedIn profile at <a href="https://www.linkedin.com/in/manoj-murali-/">https://www.linkedin.com/in/manoj-murali-/</a>.</p>
-<p>As two friends with a passion for robotics and automation, we decided to explore ROS2 as a way to build our skills and gain practical experience in the field. Along the way, we encountered many challenges, took risks, and learned valuable lessons that we want to share with others.</p>
-<p>In this e-book, I’ll take you through our journey with ROS2, from the basics of getting started to more advanced topics like application development and contributing to the ROS2 community. I’ve organized the content in a way that I hope will be easy to follow, with plenty of examples and practical tips to help you along the way.</p>
-<p>Whether you’re a beginner just starting out with ROS2 or an intermediate learner looking to expand your skills, I hope that this e-book will be a valuable resource for you. So come along with us on our adventurous path with ROS2, and let’s explore the exciting world of robotics and automation together!</p>
 
-
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -580,10 +655,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./installation.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installation</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./introduction-to-ros2.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to ROS2</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./command-line-tools.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tools</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

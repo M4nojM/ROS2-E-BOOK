@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Rishikesavan Ramesh, Manoj Murali">
-<meta name="dcterms.date" content="2023-04-05">
 
-<title>ROS 2 : Mea Via et Mea Disciplina</title>
+<title>ROS 2 : Mea Via et Mea Disciplina - 4&nbsp; Command line tools</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./introduction-to-ros2.html" rel="next">
+<link href="./nodes.html" rel="next">
+<link href="./creating-a-workspace.html" rel="prev">
 <link href="./cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -75,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./command-line-tools.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tools</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -102,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -126,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./command-line-tools.html" class="sidebar-item-text sidebar-link">
+  <a href="./command-line-tools.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tools</span></span></a>
   </div>
 </li>
@@ -151,13 +150,13 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./services.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Services</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">services.html</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ros2-concepts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ros2 Concepts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">ros2-concepts.html</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -292,39 +291,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">ROS 2 : Mea Via et Mea Disciplina</h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tools</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Rishikesavan Ramesh, Manoj Murali </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 5, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -332,17 +313,186 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<div class="status">
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!</p>
+</div>
+</div>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Commands</th>
+<th style="text-align: left;">Short description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ros2 run</td>
+<td style="text-align: left;">Run a ROS2 node from a package.</td>
+</tr>
+<tr class="even">
+<td>ros2 node</td>
+<td style="text-align: left;">Interact with a running ROS2 node.</td>
+</tr>
+<tr class="odd">
+<td>ros2 topic</td>
+<td style="text-align: left;">Interact with ROS2 topics.</td>
+</tr>
+<tr class="even">
+<td>ros2 service</td>
+<td style="text-align: left;">Interact with ROS2 services.</td>
+</tr>
+<tr class="odd">
+<td>ros2 param</td>
+<td style="text-align: left;">Interact with ROS2 parameters.</td>
+</tr>
+<tr class="even">
+<td>ros2 bag</td>
+<td style="text-align: left;">Record and play back ROS2 messages.</td>
+</tr>
+<tr class="odd">
+<td>ros2 launch</td>
+<td style="text-align: left;">Launch multiple nodes at once.</td>
+</tr>
+<tr class="even">
+<td>ros2 interface</td>
+<td style="text-align: left;">Interact with ROS2 interfaces.</td>
+</tr>
+<tr class="odd">
+<td>ros2 pkg</td>
+<td style="text-align: left;">Manage ROS2 packages.</td>
+</tr>
+<tr class="even">
+<td>ros2 pkg create</td>
+<td style="text-align: left;">Create a new ROS2 package.</td>
+</tr>
+<tr class="odd">
+<td>ros2 pkg list</td>
+<td style="text-align: left;">List available ROS2 packages.</td>
+</tr>
+<tr class="even">
+<td>ros2 pkg create –build-type ament_cmake</td>
+<td style="text-align: left;">Create a new ROS2 package with the Ament CMake build system.</td>
+</tr>
+<tr class="odd">
+<td>ros2 pkg create –build-type ament_python</td>
+<td style="text-align: left;">Create a new ROS2 package with the Ament Python build system.</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Expand To Learn More About <strong>“ros2 pkg create”</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Commands</th>
+<th style="text-align: left;">Short description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ros2 pkg create –build-type ament_lint</td>
+<td style="text-align: left;">Create a new ROS2 package with the Ament Lint build system.</td>
+</tr>
+<tr class="even">
+<td>ros2 pkg create –build-type ament_cmake_pytest</td>
+<td style="text-align: left;">Create a new ROS2 package with the Ament CMake Pytest build system.</td>
+</tr>
+<tr class="odd">
+<td>ros2 pkg create –build-type ament_cmake_gtest</td>
+<td style="text-align: left;">Create a new ROS2 package with the Ament CMake Gtest build system.</td>
+</tr>
+<tr class="even">
+<td>ros2 pkg create –build-type colcon</td>
+<td style="text-align: left;">Create a new ROS2 package with the Colcon build system.</td>
+</tr>
+<tr class="odd">
+<td>ros2 pkg create –build-type colcon-python</td>
+<td style="text-align: left;">Create a new ROS2 package with the Colcon Python build system.</td>
+</tr>
+<tr class="even">
+<td>ros2 pkg create –build-type colcon-cmake</td>
+<td style="text-align: left;">Create a new ROS2 package with the Colcon CMake build system.</td>
+</tr>
+<tr class="odd">
+<td>ros2 pkg create –build-type colcon-ros</td>
+<td style="text-align: left;">Create a new ROS2 package with the Colcon ROS build system.</td>
+</tr>
+<tr class="even">
+<td>ros2 pkg create –build-type colcon-ros-python</td>
+<td style="text-align: left;">Create a new ROS2 package with the Colcon ROS Python build system.</td>
+</tr>
+<tr class="odd">
+<td>ros2 pkg create –build-type colcon-ros-cmake</td>
+<td style="text-align: left;">Create a new ROS2 package with the Colcon ROS CMake build system.</td>
+</tr>
+<tr class="even">
+<td>ros2 pkg create –build-type ament_cmake_ros</td>
+<td style="text-align: left;">Create a new ROS2 package with the Ament CMake ROS build system.</td>
+</tr>
+<tr class="odd">
+<td>ros2 pkg create –build-type ament_cmake_python</td>
+<td style="text-align: left;">Create a new ROS2 package with the Ament CMake Python build system.</td>
+</tr>
+<tr class="even">
+<td>ros2 pkg create –build-type ament_cmake_lint</td>
+<td style="text-align: left;">Create a new ROS2 package with the Ament CMake Lint build system.</td>
+</tr>
+<tr class="odd">
+<td>ros2 pkg create –build-type ament_cmake_pytest_coverage</td>
+<td style="text-align: left;">Create a new ROS2 package with the Ament CMake Pytest Coverage build system.</td>
+</tr>
+<tr class="even">
+<td>ros2 pkg create –build-type ament_cmake_ros_testing</td>
+<td style="text-align: left;">Create a new ROS2 package with the Ament CMake ROS Testing build system.</td>
+</tr>
+<tr class="odd">
+<td>ros2 pkg create –build-type ament_cmake_flake8</td>
+<td style="text-align: left;">Create a new ROS2 package with the Ament CMake Flake8 build system.</td>
+</tr>
+<tr class="even">
+<td>ros2 pkg create –build-type ament_cmake_mypy</td>
+<td style="text-align: left;">Create a new ROS2 package with the Ament CMake MyPy build system.</td>
+</tr>
+<tr class="odd">
+<td>ros2 pkg create –build-type ament_cmake_pep257</td>
+<td style="text-align: left;">Create a new ROS2 package with</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1><p><img src="cover.png" title="ROS 2 : Mea Via et Mea Disciplina" class="quarto-cover-image img-fluid"></p>
-<p>Welcome to my journey with ROS2! This e-book is a documentation of my and my friend Manoj Murali’s adventurous experience with ROS2 as intermediate learners. As the author of this book, I’m excited to share our journey with you, and I hope that our experiences will be useful for those who are new to ROS2 as well.</p>
-<p>You can find Manoj Murali’s LinkedIn profile at <a href="https://www.linkedin.com/in/manoj-murali-/">https://www.linkedin.com/in/manoj-murali-/</a>.</p>
-<p>As two friends with a passion for robotics and automation, we decided to explore ROS2 as a way to build our skills and gain practical experience in the field. Along the way, we encountered many challenges, took risks, and learned valuable lessons that we want to share with others.</p>
-<p>In this e-book, I’ll take you through our journey with ROS2, from the basics of getting started to more advanced topics like application development and contributing to the ROS2 community. I’ve organized the content in a way that I hope will be easy to follow, with plenty of examples and practical tips to help you along the way.</p>
-<p>Whether you’re a beginner just starting out with ROS2 or an intermediate learner looking to expand your skills, I hope that this e-book will be a valuable resource for you. So come along with us on our adventurous path with ROS2, and let’s explore the exciting world of robotics and automation together!</p>
 
-
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -580,10 +730,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./creating-a-workspace.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Creating Workspace</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./introduction-to-ros2.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to ROS2</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./nodes.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Nodes</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

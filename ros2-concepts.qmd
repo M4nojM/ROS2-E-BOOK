@@ -1,0 +1,21 @@
+# Ros2 Concepts
+
+```{r}
+#| results: "asis"
+#| echo: false
+source("_common.R")
+status("drafting")
+```
+
+| ROS2-Concept| 	Description|
+|-------------|:-------------------|
+|Nodes|	A node is a process that performs a specific task, such as sensing or actuating. Nodes can communicate with each other by sending and receiving messages over topics.|
+|Topics|	A topic is a named bus over which nodes can publish and subscribe to messages. Topics are used for one-to-many communication.|
+|Services|	A service is a request-response communication model between nodes. A node can make a request to a service and receive a response from it. |
+| Actions|	Actions are similar to services, but they allow for more complex communication patterns, such as canceling a request or providing feedback during the execution of a request.|
+| Parameters|	Parameters are key-value pairs that can be used to configure nodes and their behavior. | 
+| Launch files | 	A launch file is an XML file that specifies how to start multiple nodes with their respective parameters and configurations.|
+|RQT|	RQT is a collection of ROS graphical tools for debugging, monitoring, and visualizing ROS topics, nodes, and messages.|
+|RViz| 	RViz is a 3D visualization tool for ROS that allows users to display and interact with sensor data and robot models in real-time.|
+|tf2|	tf2 is a library for keeping track of coordinate frames over time. It provides a way to transform data between different coordinate frames in a robot system.|
+|ROS2 Middleware|	ROS2 Middleware is the layer of software that provides the communication infrastructure between nodes. ROS2 provides multiple middleware options, such as Fast RTPS and Cyclone DDS.|

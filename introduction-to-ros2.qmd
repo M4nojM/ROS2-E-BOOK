@@ -1,0 +1,11 @@
+```{r}
+#| results: "asis"
+#| echo: false
+source("_common.R")
+status("drafting")
+```
+# Introduction to ROS2
+
+ROS (Robot Operating System) was first released by Open Robotics in 2007 as a set of software libraries and tools for building robot applications. At the core of a ROS system are independent nodes that communicate with each other using a publish/subscribe messaging platform. For example, a sensor's driver could be implemented as a node that publishes sensor data, and this data can be read by any number of other nodes, such as filters, loggers, mapping, and navigation nodes. What's great about ROS is that these nodes can be on different systems or used by different architectures, making it flexible and adaptable to users' needs.
+
+ROS 2 is the next version of ROS and includes many of the same components and tools as its predecessor, but also adds new features like an improved communication stack with real-time data distribution service (DDS) protocol, support for multiple DDS implementations, and DDS security support. It also offers improved logging capabilities, ability to configure QoS at startup, improved rosbag2 performance, and more. ROS 2 is designed to be scalable, efficient, and secure, making it a great choice for building robotic applications.
