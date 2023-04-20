@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "ROS 2 : Mea Via et Mea Disciplina",
     "section": "",
-    "text": "Preface\nWelcome to my journey with ROS2! This e-book is a documentation of my and my friend Manoj Murali’s adventurous experience with ROS2 as intermediate learners. As the author of this book, I’m excited to share our journey with you, and I hope that our experiences will be useful for those who are new to ROS2 as well.\nYou can find Manoj Murali’s LinkedIn profile at https://www.linkedin.com/in/manoj-murali-/.\nAs two friends with a passion for robotics and automation, we decided to explore ROS2 as a way to build our skills and gain practical experience in the field. Along the way, we encountered many challenges, took risks, and learned valuable lessons that we want to share with others.\nIn this e-book, I’ll take you through our journey with ROS2, from the basics of getting started to more advanced topics like application development and contributing to the ROS2 community. I’ve organized the content in a way that I hope will be easy to follow, with plenty of examples and practical tips to help you along the way.\nWhether you’re a beginner just starting out with ROS2 or an intermediate learner looking to expand your skills, I hope that this e-book will be a valuable resource for you. So come along with us on our adventurous path with ROS2, and let’s explore the exciting world of robotics and automation together!"
+    "text": "Preface\nWelcome to our journey with ROS2! As authors of this e-book, we are excited to document our experience as beginner learners in the field of robotics and automation. Our goal is to share our learning journey with you, in the hopes that it will be useful for others who are new to ROS2 as well.\nWe are two friends, Rishikesavan Ramesh and Manoj M, who share a passion for robotics and automation. Together, we decided to explore ROS2 as a way to build our skills and gain practical experience in the field. Along the way, we encountered many challenges, took risks, and learned valuable lessons that we want to share with others.\nIn this e-book, we will take you through our journey with ROS2, from the basics of getting started to more advanced topics like application development and contributing to the ROS2 community. We have organized the content in a way that we hope will be easy to follow, with plenty of examples and practical tips to help you along the way.\nOur approach to learning involves documenting our experiences and creating a resource that can help other beginners on the same path. We believe that this approach can be very useful, as it provides a real-world perspective on the learning process and can help new beginners avoid some of the common pitfalls and mistakes.\nWhether you are a beginner just starting out with ROS2 or an intermediate learner looking to expand your skills, we hope that this e-book will be a valuable resource for you. So join us on our adventurous path with ROS2, and let’s explore the exciting world of robotics and automation together!\nYou can find our LinkedIn profiles at\nhttps://www.linkedin.com/in/manoj-murali-/ and https://www.linkedin.com/in/rishikesavan-ramesh/."
   },
   {
     "objectID": "installation.html",
@@ -128,7 +128,7 @@
   {
     "objectID": "creating-a-workspace.html#sourcing-the-binaries",
     "href": "creating-a-workspace.html#sourcing-the-binaries",
-    "title": "3  Creating Workspace",
+    "title": "3  Sourcing",
     "section": "3.1 Sourcing the binaries",
     "text": "3.1 Sourcing the binaries\nBy default, when you install ROS2, it does not source its binaries automatically. This means that you will need to manually source the setup file to use the ROS2 binaries.\nThere are several reasons why ROS2 doesn’t source its binaries by default:\n\n3.1.1 Isolation:\nROS2 supports multiple installations of itself and its dependencies, so not sourcing the binaries by default allows for better isolation between different installations. This means that you can have multiple ROS2 installations on the same machine without them interfering with each other.\n\n\n3.1.2 Flexibility:\nBy not sourcing the binaries by default, ROS2 allows you to choose which version of the software to use for each terminal session. This is useful when working on different projects that require different versions of ROS2.\n\n\n3.1.3 Avoiding conflicts:\nSourcing the binaries by default can cause conflicts with other software installed on your machine that may use the same environment variables.\nIn summary, not sourcing the binaries by default in ROS2 allows for better isolation, flexibility, and avoids conflicts with other software on your machine. However, it does require a manual step to set up each terminal session to use ROS2, which can be seen as a minor inconvenience.\n\n\n\n\n\n\nA workaround\n\n\n\nThis can be advantageous when you want to work on multiple projects that require you to install multiple distros.\nCreating a shortcut would be helpful. Here is how,\nStep 1: Create a file in your home directory,\ntouch ~/.ros2_config\nStep 2: Edit ~/.bashrc and ~/.ros2_config\necho \"alias shumble=\"source ~/.ros2_config\"\" &gt;&gt; ~/.bashrc\necho \"source /opt/ros/humble/setup.bash\"\" &gt; ~/.bashrc\nIt is advisable to edit the ~/.bashrc as less as possible, so that reducing the risk of misconfiguring the vital configurations in the ~/.bashrc\nYou can now twerk ~/.ros2_config to change any ros related settings, while it being isolated from other configurations."
   },
@@ -184,6 +184,104 @@
   {
     "objectID": "publishers-and-subscribers.html",
     "href": "publishers-and-subscribers.html",
+    "title": "ROS 2 : Mea Via et Mea Disciplina ",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"
+  },
+  {
+    "objectID": "parameters.html",
+    "href": "parameters.html",
+    "title": "ROS 2 : Mea Via et Mea Disciplina ",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"
+  },
+  {
+    "objectID": "launch-files.html",
+    "href": "launch-files.html",
+    "title": "ROS 2 : Mea Via et Mea Disciplina ",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"
+  },
+  {
+    "objectID": "ros2-implementation.html",
+    "href": "ros2-implementation.html",
+    "title": "ROS 2 : Mea Via et Mea Disciplina ",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"
+  },
+  {
+    "objectID": "writing-ros2-nodes.html",
+    "href": "writing-ros2-nodes.html",
+    "title": "ROS 2 : Mea Via et Mea Disciplina ",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"
+  },
+  {
+    "objectID": "using-ros2-libraries.html",
+    "href": "using-ros2-libraries.html",
+    "title": "ROS 2 : Mea Via et Mea Disciplina ",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"
+  },
+  {
+    "objectID": "sensor-data-processing-pipeline.html",
+    "href": "sensor-data-processing-pipeline.html",
+    "title": "ROS 2 : Mea Via et Mea Disciplina ",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"
+  },
+  {
+    "objectID": "robot-perception-system.html",
+    "href": "robot-perception-system.html",
+    "title": "ROS 2 : Mea Via et Mea Disciplina ",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"
+  },
+  {
+    "objectID": "human-robot-interaction-system.html",
+    "href": "human-robot-interaction-system.html",
+    "title": "ROS 2 : Mea Via et Mea Disciplina ",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"
+  },
+  {
+    "objectID": "getting-involved-in-the-community.html",
+    "href": "getting-involved-in-the-community.html",
+    "title": "ROS 2 : Mea Via et Mea Disciplina ",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"
+  },
+  {
+    "objectID": "ros2-package-development.html",
+    "href": "ros2-package-development.html",
+    "title": "ROS 2 : Mea Via et Mea Disciplina ",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "ROS 2 : Mea Via et Mea Disciplina ",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"
+  },
+  {
+    "objectID": "clients-and-servers.html",
+    "href": "clients-and-servers.html",
+    "title": "ROS 2 : Mea Via et Mea Disciplina ",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"
+  },
+  {
+    "objectID": "creating-ws.html",
+    "href": "creating-ws.html",
+    "title": "10  Creating package",
+    "section": "",
+    "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"
+  },
+  {
+    "objectID": "building.html",
+    "href": "building.html",
     "title": "ROS 2 : Mea Via et Mea Disciplina ",
     "section": "",
     "text": "Important\n\n\n\nYou are reading the work-in-progress edition of ROS 2 : Mea Via et Mea Disciplina. This chapter is currently a dumping ground for ideas, and we don’t recommend reading it. The complete version will be available here soon. Stay tuned!"

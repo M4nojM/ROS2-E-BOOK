@@ -1,4 +1,4 @@
-# Creating Workspace
+# Sourcing
 ```{r}
 #| results: "asis"
 #| echo: false
@@ -6,14 +6,6 @@ source("_common.R")
 status("drafting")
 ```
 
-
-A ROS package is developed in a controlled environment called workspace.
-
-To create a workspace, use the following command to create the directories required,
-```{.bash}
-# mkdir -p <workspace-name>/src
-mkdir -p ros2_ws/src
-```
 ## Sourcing the binaries
 By default, when you install ROS2, it does not source its binaries automatically. This means that you will need to manually source the setup file to use the ROS2 binaries.
 

@@ -3,7 +3,7 @@ project:
   output-dir: docs
 book:
   title: "ROS 2 : Mea Via et Mea Disciplina "
-  author: "Rishikesavan Ramesh, Manoj Murali"
+  author: "Rishikesavan Ramesh, Manoj M"
   date: "4/5/2023"
   chapters:
     - index.qmd
@@ -20,6 +20,8 @@ book:
     - messages.qmd
     - services.qmd
     - ros2-concepts.qmd
+    - creating-ws.qmd
+    - building.qmd
     - publishers-and-subscribers.qmd
     - clients-and-servers.qmd
     - actions.qmd
