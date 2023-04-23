@@ -36,7 +36,7 @@ touch ~/.ros2_config
 **Step 2**: Edit ~/.bashrc and ~/.ros2_config
 ```{.bash}
 echo "alias shumble="source ~/.ros2_config"" >> ~/.bashrc
-echo "source /opt/ros/humble/setup.bash"" > ~/.ros2_config
+echo "source /opt/ros/humble/setup.bash" > ~/.ros2_config
 ```
 It is advisable to edit the ~/.bashrc as less as possible, so that reducing the risk of misconfiguring the vital configurations in the ~/.bashrc 
 
