@@ -8,7 +8,7 @@ status("drafting")
 
 # Installation 
 
-We recommand and use ROS2: humble (for now).
+We recommend and use ROS2: humble (for now).
 
 ::::{.panel-tabset}
 

@@ -1,11 +1,15 @@
 # Preface {.unnumbered}
 
-Welcome to my journey with ROS2! This e-book is a documentation of my and my friend Manoj Murali's adventurous experience with ROS2 as intermediate learners. As the author of this book, I'm excited to share our journey with you, and I hope that our experiences will be useful for those who are new to ROS2 as well.
+Welcome to our journey with ROS2! As authors of this e-book, we are excited to document our experience as beginner learners in the field of robotics and automation. Our goal is to share our learning journey with you, in the hopes that it will be useful for others who are new to ROS2 as well.
 
-You can find Manoj Murali's LinkedIn profile at [ https://www.linkedin.com/in/manoj-murali-/]( https://www.linkedin.com/in/manoj-murali-/).
+We are two friends, Rishikesavan Ramesh and Manoj M, who share a passion for robotics and automation. Together, we decided to explore ROS2 as a way to build our skills and gain practical experience in the field. Along the way, we encountered many challenges, took risks, and learned valuable lessons that we want to share with others.
 
-As two friends with a passion for robotics and automation, we decided to explore ROS2 as a way to build our skills and gain practical experience in the field. Along the way, we encountered many challenges, took risks, and learned valuable lessons that we want to share with others.
+In this e-book, we will take you through our journey with ROS2, from the basics of getting started to more advanced topics like application development and contributing to the ROS2 community. We have organized the content in a way that we hope will be easy to follow, with plenty of examples and practical tips to help you along the way.
 
-In this e-book, I'll take you through our journey with ROS2, from the basics of getting started to more advanced topics like application development and contributing to the ROS2 community. I've organized the content in a way that I hope will be easy to follow, with plenty of examples and practical tips to help you along the way.
+Our approach to learning involves documenting our experiences and creating a resource that can help other beginners on the same path. We believe that this approach can be very useful, as it provides a real-world perspective on the learning process and can help new beginners avoid some of the common pitfalls and mistakes.
 
-Whether you're a beginner just starting out with ROS2 or an intermediate learner looking to expand your skills, I hope that this e-book will be a valuable resource for you. So come along with us on our adventurous path with ROS2, and let's explore the exciting world of robotics and automation together!
+Whether you are a beginner just starting out with ROS2 or an intermediate learner looking to expand your skills, we hope that this e-book will be a valuable resource for you. So join us on our adventurous path with ROS2, and let's explore the exciting world of robotics and automation together!
+
+You can find our LinkedIn profiles at 
+
+[https://www.linkedin.com/in/manoj-murali-/](https://www.linkedin.com/in/manoj-murali-/) and [https://www.linkedin.com/in/rishikesavan-ramesh/](https://www.linkedin.com/in/rishikesavan-ramesh/).
