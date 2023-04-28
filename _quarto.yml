@@ -44,9 +44,7 @@ book:
     - conclusion.qmd
     - references.qmd
     comments: 
-      hypothesis:
-        theme: clean
-        openSidebar: false
+      hypothesis: true
 
   cover-image: cover.png
   favicon: cover.png
