@@ -43,8 +43,8 @@ book:
     - contributing-to-existing-packages.qmd
     - conclusion.qmd
     - references.qmd
-    comments: 
-      hypothesis: true
+  comments: 
+    hypothesis: true
 
   cover-image: cover.png
   favicon: cover.png
