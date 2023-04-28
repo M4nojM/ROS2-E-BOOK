@@ -1,14 +1,3 @@
----
-website:
-  comments: 
-    hypothesis:
-      theme: clean
-      openSidebar: false
----
-
-
-
-
 # Preface {.unnumbered}
 
 Welcome to our journey with ROS2! As authors of this e-book, we are excited to document our experience as beginner learners in the field of robotics and automation. Our goal is to share our learning journey with you, in the hopes that it will be useful for others who are new to ROS2 as well.
