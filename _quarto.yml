@@ -43,6 +43,11 @@ book:
     - contributing-to-existing-packages.qmd
     - conclusion.qmd
     - references.qmd
+    comments: 
+      hypothesis:
+        theme: clean
+        openSidebar: false
+
   cover-image: cover.png
   favicon: cover.png
   
