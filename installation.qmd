@@ -1,3 +1,16 @@
+---
+website:
+  comments: 
+    hypothesis:
+      theme: clean
+      openSidebar: false
+---
+
+
+
+
+
+
 ```{r}
 #| results: "asis"
 #| echo: false
