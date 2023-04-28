@@ -9,6 +9,7 @@
   numbers=noendperiod]{scrreprt}
 
 \usepackage{amsmath,amssymb}
+\usepackage{lmodern}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -18,10 +19,6 @@
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-\fi
-\usepackage{lmodern}
-\ifPDFTeX\else  
-    % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -52,6 +49,46 @@
   \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
@@ -80,7 +117,7 @@
 
 \KOMAoption{captions}{tableheading}
 \makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
 \@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
 \definecolor{quarto-callout-color}{HTML}{909090}
 \definecolor{quarto-callout-note-color}{HTML}{0758E5}
@@ -140,12 +177,10 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
 \makeatother
 \makeatletter
 \@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
 \makeatother
 \makeatletter
 \makeatother
@@ -157,7 +192,7 @@
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
   pdftitle={ROS 2 : Mea Via et Mea Disciplina},
-  pdfauthor={Rishikesavan Ramesh, Manoj Murali},
+  pdfauthor={Rishikesavan Ramesh, Manoj M},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -166,12 +201,12 @@
   pdfcreator={LaTeX via pandoc}}
 
 \title{ROS 2 : Mea Via et Mea Disciplina}
-\author{Rishikesavan Ramesh, Manoj Murali}
-\date{2023-04-05}
+\author{Rishikesavan Ramesh, Manoj M}
+\date{4/5/23}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, sharp corners, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, breakable, boxrule=0pt, frame hidden, interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -187,38 +222,738 @@
 
 \markboth{Preface}{Preface}
 
-Welcome to my journey with ROS2! This e-book is a documentation of my
-and my friend Manoj Murali's adventurous experience with ROS2 as
-intermediate learners. As the author of this book, I'm excited to share
-our journey with you, and I hope that our experiences will be useful for
-those who are new to ROS2 as well.
+Welcome to our journey with ROS2! As authors of this e-book, we are
+excited to document our experience as beginner learners in the field of
+robotics and automation. Our goal is to share our learning journey with
+you, in the hopes that it will be useful for others who are new to ROS2
+as well.
 
-You can find Manoj Murali's LinkedIn profile at
-\url{https://www.linkedin.com/in/manoj-murali-/}.
+We are two friends, Rishikesavan Ramesh and Manoj M, who share a passion
+for robotics and automation. Together, we decided to explore ROS2 as a
+way to build our skills and gain practical experience in the field.
+Along the way, we encountered many challenges, took risks, and learned
+valuable lessons that we want to share with others.
 
-As two friends with a passion for robotics and automation, we decided to
-explore ROS2 as a way to build our skills and gain practical experience
-in the field. Along the way, we encountered many challenges, took risks,
-and learned valuable lessons that we want to share with others.
-
-In this e-book, I'll take you through our journey with ROS2, from the
+In this e-book, we will take you through our journey with ROS2, from the
 basics of getting started to more advanced topics like application
-development and contributing to the ROS2 community. I've organized the
-content in a way that I hope will be easy to follow, with plenty of
+development and contributing to the ROS2 community. We have organized
+the content in a way that we hope will be easy to follow, with plenty of
 examples and practical tips to help you along the way.
 
-Whether you're a beginner just starting out with ROS2 or an intermediate
-learner looking to expand your skills, I hope that this e-book will be a
-valuable resource for you. So come along with us on our adventurous path
-with ROS2, and let's explore the exciting world of robotics and
-automation together!
+Our approach to learning involves documenting our experiences and
+creating a resource that can help other beginners on the same path. We
+believe that this approach can be very useful, as it provides a
+real-world perspective on the learning process and can help new
+beginners avoid some of the common pitfalls and mistakes.
+
+Whether you are a beginner just starting out with ROS2 or an
+intermediate learner looking to expand your skills, we hope that this
+e-book will be a valuable resource for you. So join us on our
+adventurous path with ROS2, and let's explore the exciting world of
+robotics and automation together!
+
+You can find our LinkedIn profiles at
+
+\url{https://www.linkedin.com/in/manoj-murali-/} and
+\url{https://www.linkedin.com/in/rishikesavan-ramesh/}.
+
+\bookmarksetup{startatroot}
+
+\hypertarget{introduction-to-ros2}{%
+\chapter{Introduction to ROS2}\label{introduction-to-ros2}}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
+
+You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
+Disciplina. This chapter is currently a dumping ground for ideas, and we
+don't recommend reading it. The complete version will be available here
+soon. Stay tuned!
+
+\end{tcolorbox}
+
+ROS (Robot Operating System) was first released by Open Robotics in 2007
+as a set of software libraries and tools for building robot
+applications. At the core of a ROS system are independent nodes that
+communicate with each other using a publish/subscribe messaging
+platform. For example, a sensor's driver could be implemented as a node
+that publishes sensor data, and this data can be read by any number of
+other nodes, such as filters, loggers, mapping, and navigation nodes.
+What's great about ROS is that these nodes can be on different systems
+or used by different architectures, making it flexible and adaptable to
+users' needs.
+
+ROS 2 is the next version of ROS and includes many of the same
+components and tools as its predecessor, but also adds new features like
+an improved communication stack with real-time data distribution service
+(DDS) protocol, support for multiple DDS implementations, and DDS
+security support. It also offers improved logging capabilities, ability
+to configure QoS at startup, improved rosbag2 performance, and more. ROS
+2 is designed to be scalable, efficient, and secure, making it a great
+choice for building robotic applications.
+
+\bookmarksetup{startatroot}
+
+\hypertarget{opensidebar-false}{%
+\chapter{openSidebar: false}\label{opensidebar-false}}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
+
+You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
+Disciplina. This chapter is currently a dumping ground for ideas, and we
+don't recommend reading it. The complete version will be available here
+soon. Stay tuned!
+
+\end{tcolorbox}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+website: comments: hypothesis: theme: clean
+
+\bookmarksetup{startatroot}
+
+\hypertarget{installation}{%
+\chapter{Installation}\label{installation}}
+
+We recommend and use ROS2: humble (for now).
+
+\bookmarksetup{startatroot}
+
+\hypertarget{sec-ubuntu}{%
+\chapter{Ubuntu}\label{sec-ubuntu}}
+
+\hypertarget{set-locale}{%
+\subsubsection{Set Locale}\label{set-locale}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\ExtensionTok{locale}  \CommentTok{\# check for UTF{-}8}
+
+\FunctionTok{sudo}\NormalTok{ apt update }\KeywordTok{\&\&} \FunctionTok{sudo}\NormalTok{ apt install locales}
+\FunctionTok{sudo}\NormalTok{ locale{-}gen en\_US en\_US.UTF{-}8}
+\FunctionTok{sudo}\NormalTok{ update{-}locale LC\_ALL=en\_US.UTF{-}8 LANG=en\_US.UTF{-}8}
+\BuiltInTok{export} \VariableTok{LANG}\OperatorTok{=}\NormalTok{en\_US.UTF{-}8}
+
+\ExtensionTok{locale}  \CommentTok{\# verify settings}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{setup-sources}{%
+\subsubsection{Setup Sources}\label{setup-sources}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt install software{-}properties{-}common}
+\FunctionTok{sudo}\NormalTok{ add{-}apt{-}repository universe}
+\FunctionTok{sudo}\NormalTok{ apt update }\KeywordTok{\&\&} \FunctionTok{sudo}\NormalTok{ apt install curl }\AttributeTok{{-}y}
+\FunctionTok{sudo}\NormalTok{ curl }\AttributeTok{{-}sSL}\NormalTok{ https://raw.githubusercontent.com/ros/rosdistro/master/ros.key }\AttributeTok{{-}o}\NormalTok{ /usr/share/keyrings/ros{-}archive{-}keyring.gpg}
+\BuiltInTok{echo} \StringTok{"deb [arch=}\VariableTok{$(}\ExtensionTok{dpkg} \AttributeTok{{-}{-}print{-}architecture}\VariableTok{)}\StringTok{ signed{-}by=/usr/share/keyrings/ros{-}archive{-}keyring.gpg] http://packages.ros.org/ros2/ubuntu }\VariableTok{$(}\BuiltInTok{.}\NormalTok{ /etc/os{-}release }\KeywordTok{\&\&} \BuiltInTok{echo} \VariableTok{$UBUNTU\_CODENAME)}\StringTok{ main"} \KeywordTok{|} \FunctionTok{sudo}\NormalTok{ tee /etc/apt/sources.list.d/ros2.list }\OperatorTok{\textgreater{}}\NormalTok{ /dev/null}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{install-ros2-packages}{%
+\subsubsection{Install ROS2 packages}\label{install-ros2-packages}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt update}
+\FunctionTok{sudo}\NormalTok{ apt upgrade}
+\end{Highlighting}
+\end{Shaded}
+
+here you have three options,
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt install ros{-}humble{-}desktop}
+\end{Highlighting}
+\end{Shaded}
+
+or
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt install ros{-}humble{-}ros{-}base}
+\end{Highlighting}
+\end{Shaded}
+
+or
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt install ros{-}humble{-}ros{-}dev{-}tools}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{environment-setup}{%
+\subsubsection{Environment setup}\label{environment-setup}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Replace ".bash" with your shell if you\textquotesingle{}re not using bash}
+\CommentTok{\# Possible values are: setup.bash, setup.sh, setup.zsh}
+\BuiltInTok{source}\NormalTok{ /opt/ros/humble/setup.bash}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{uninstall}{%
+\subsubsection{Uninstall}\label{uninstall}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt remove \textasciitilde{}nros{-}humble{-}}\PreprocessorTok{*} \KeywordTok{\&\&} \FunctionTok{sudo}\NormalTok{ apt autoremove}
+\FunctionTok{sudo}\NormalTok{ rm /etc/apt/sources.list.d/ros2.list}
+\FunctionTok{sudo}\NormalTok{ apt update}
+\FunctionTok{sudo}\NormalTok{ apt autoremove}
+\CommentTok{\# Consider upgrading for packages previously shadowed.}
+\FunctionTok{sudo}\NormalTok{ apt upgrade}
+\end{Highlighting}
+\end{Shaded}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{sec-rhel-8}{%
+\chapter{RHEL 8}\label{sec-rhel-8}}
+
+\hypertarget{set-locale-1}{%
+\subsubsection{Set Locale}\label{set-locale-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{locale}  \CommentTok{\# check for UTF{-}8}
+
+\FunctionTok{sudo}\NormalTok{ dnf install langpacks{-}en glibc{-}langpack{-}en}
+\BuiltInTok{export} \VariableTok{LANG}\OperatorTok{=}\NormalTok{en\_US.UTF{-}8}
+
+\ExtensionTok{locale}  \CommentTok{\# verify settings}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{setup-sources-1}{%
+\subsubsection{Setup Sources}\label{setup-sources-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ dnf install }\StringTok{\textquotesingle{}dnf{-}command(config{-}manager)\textquotesingle{}}\NormalTok{ epel{-}release }\AttributeTok{{-}y}
+\FunctionTok{sudo}\NormalTok{ dnf config{-}manager }\AttributeTok{{-}{-}set{-}enabled}\NormalTok{ powertools}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
+
+This step may be slightly different depending on the distribution you
+are using. Check the EPEL
+documentation:\url{https://docs.fedoraproject.org/en-US/epel/\#_quickstart}
+
+\end{tcolorbox}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ dnf install curl}
+\FunctionTok{sudo}\NormalTok{ curl }\AttributeTok{{-}{-}output}\NormalTok{ /etc/yum.repos.d/ros2.repo http://packages.ros.org/ros2/rhel/ros2.repo}
+\FunctionTok{sudo}\NormalTok{ dnf makecache}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{install-ros2-packages-1}{%
+\subsubsection{Install ROS2 packages}\label{install-ros2-packages-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ dnf update}
+\FunctionTok{sudo}\NormalTok{ dnf install ros{-}humble{-}desktop}
+\end{Highlighting}
+\end{Shaded}
+
+or simply
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ dnf install ros{-}humble{-}ros{-}base}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{environment-setup-1}{%
+\subsubsection{Environment setup}\label{environment-setup-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Replace ".bash" with your shell if you\textquotesingle{}re not using bash}
+\CommentTok{\# Possible values are: setup.bash, setup.sh, setup.zsh}
+\BuiltInTok{source}\NormalTok{ /opt/ros/humble/setup.bash}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{uninstall-1}{%
+\subsubsection{Uninstall}\label{uninstall-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ dnf remove ros{-}humble{-}}\PreprocessorTok{*}
+\end{Highlighting}
+\end{Shaded}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{windows}{%
+\chapter{Windows}\label{windows}}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Danger}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-caution-color-frame, colbacktitle=quarto-callout-caution-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
+
+Sorry, we dont do that here, although it is quite possible with ros2
+
+\end{tcolorbox}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{sourcing}{%
+\chapter{Sourcing}\label{sourcing}}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
+
+You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
+Disciplina. This chapter is currently a dumping ground for ideas, and we
+don't recommend reading it. The complete version will be available here
+soon. Stay tuned!
+
+\end{tcolorbox}
+
+\hypertarget{sourcing-the-binaries}{%
+\section{Sourcing the binaries}\label{sourcing-the-binaries}}
+
+By default, when you install ROS2, it does not source its binaries
+automatically. This means that you will need to manually source the
+setup file to use the ROS2 binaries.
+
+There are several reasons why ROS2 doesn't source its binaries by
+default:
+
+\hypertarget{isolation}{%
+\subsection{Isolation:}\label{isolation}}
+
+ROS2 supports multiple installations of itself and its dependencies, so
+not sourcing the binaries by default allows for better isolation between
+different installations. This means that you can have multiple ROS2
+installations on the same machine without them interfering with each
+other.
+
+\hypertarget{flexibility}{%
+\subsection{Flexibility:}\label{flexibility}}
+
+By not sourcing the binaries by default, ROS2 allows you to choose which
+version of the software to use for each terminal session. This is useful
+when working on different projects that require different versions of
+ROS2.
+
+\hypertarget{avoiding-conflicts}{%
+\subsection{Avoiding conflicts:}\label{avoiding-conflicts}}
+
+Sourcing the binaries by default can cause conflicts with other software
+installed on your machine that may use the same environment variables.
+
+In summary, not sourcing the binaries by default in ROS2 allows for
+better isolation, flexibility, and avoids conflicts with other software
+on your machine. However, it does require a manual step to set up each
+terminal session to use ROS2, which can be seen as a minor
+inconvenience.
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
+
+This can be advantageous when you want to work on multiple projects that
+require you to install multiple distros.
+
+Creating a shortcut would be helpful. Here is how,
+
+\textbf{Step 1}: Create a file in your home directory,
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{touch}\NormalTok{ \textasciitilde{}/.ros2\_config}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Step 2}: Edit \textasciitilde/.bashrc and
+\textasciitilde/.ros2\_config
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{echo} \StringTok{"alias shumble="}\NormalTok{source \textasciitilde{}/.ros2\_config}\StringTok{""} \OperatorTok{\textgreater{}\textgreater{}}\NormalTok{ \textasciitilde{}/.bashrc}
+\BuiltInTok{echo} \StringTok{"source /opt/ros/humble/setup.bash"} \OperatorTok{\textgreater{}}\NormalTok{ \textasciitilde{}/.ros2\_config}
+\end{Highlighting}
+\end{Shaded}
+
+It is advisable to edit the \textasciitilde/.bashrc as less as possible,
+so that reducing the risk of misconfiguring the vital configurations in
+the \textasciitilde/.bashrc
+
+You can now twerk \textasciitilde/.ros2\_config to change any ros
+related settings, while it being isolated from other configurations.
+
+\end{tcolorbox}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{command-line-tools}{%
+\chapter{Command line tools}\label{command-line-tools}}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
+
+You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
+Disciplina. This chapter is currently a dumping ground for ideas, and we
+don't recommend reading it. The complete version will be available here
+soon. Stay tuned!
+
+\end{tcolorbox}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3448}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6552}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+Commands
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Short description
+\end{minipage} \\
+\midrule()
+\endhead
+ros2 run & Run a ROS2 node from a package. \\
+ros2 node & Interact with a running ROS2 node. \\
+ros2 topic & Interact with ROS2 topics. \\
+ros2 service & Interact with ROS2 services. \\
+ros2 param & Interact with ROS2 parameters. \\
+ros2 bag & Record and play back ROS2 messages. \\
+ros2 launch & Launch multiple nodes at once. \\
+ros2 interface & Interact with ROS2 interfaces. \\
+ros2 pkg & Manage ROS2 packages. \\
+ros2 pkg create & Create a new ROS2 package. \\
+ros2 pkg list & List available ROS2 packages. \\
+ros2 pkg create --build-type ament\_cmake & Create a new ROS2 package
+with the Ament CMake build system. \\
+ros2 pkg create --build-type ament\_python & Create a new ROS2 package
+with the Ament Python build system. \\
+\bottomrule()
+\end{longtable}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Expand To Learn More About \textbf{``ros2 pkg create''}}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3448}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6552}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+Commands
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Short description
+\end{minipage} \\
+\midrule()
+\endhead
+ros2 pkg create --build-type ament\_lint & Create a new ROS2 package
+with the Ament Lint build system. \\
+ros2 pkg create --build-type ament\_cmake\_pytest & Create a new ROS2
+package with the Ament CMake Pytest build system. \\
+ros2 pkg create --build-type ament\_cmake\_gtest & Create a new ROS2
+package with the Ament CMake Gtest build system. \\
+ros2 pkg create --build-type colcon & Create a new ROS2 package with the
+Colcon build system. \\
+ros2 pkg create --build-type colcon-python & Create a new ROS2 package
+with the Colcon Python build system. \\
+ros2 pkg create --build-type colcon-cmake & Create a new ROS2 package
+with the Colcon CMake build system. \\
+ros2 pkg create --build-type colcon-ros & Create a new ROS2 package with
+the Colcon ROS build system. \\
+ros2 pkg create --build-type colcon-ros-python & Create a new ROS2
+package with the Colcon ROS Python build system. \\
+ros2 pkg create --build-type colcon-ros-cmake & Create a new ROS2
+package with the Colcon ROS CMake build system. \\
+ros2 pkg create --build-type ament\_cmake\_ros & Create a new ROS2
+package with the Ament CMake ROS build system. \\
+ros2 pkg create --build-type ament\_cmake\_python & Create a new ROS2
+package with the Ament CMake Python build system. \\
+ros2 pkg create --build-type ament\_cmake\_lint & Create a new ROS2
+package with the Ament CMake Lint build system. \\
+ros2 pkg create --build-type ament\_cmake\_pytest\_coverage & Create a
+new ROS2 package with the Ament CMake Pytest Coverage build system. \\
+ros2 pkg create --build-type ament\_cmake\_ros\_testing & Create a new
+ROS2 package with the Ament CMake ROS Testing build system. \\
+ros2 pkg create --build-type ament\_cmake\_flake8 & Create a new ROS2
+package with the Ament CMake Flake8 build system. \\
+ros2 pkg create --build-type ament\_cmake\_mypy & Create a new ROS2
+package with the Ament CMake MyPy build system. \\
+ros2 pkg create --build-type ament\_cmake\_pep257 & Create a new ROS2
+package with \\
+\bottomrule()
+\end{longtable}
+
+\end{tcolorbox}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{nodes}{%
+\chapter{Nodes}\label{nodes}}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
+
+You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
+Disciplina. This chapter is currently a dumping ground for ideas, and we
+don't recommend reading it. The complete version will be available here
+soon. Stay tuned!
+
+\end{tcolorbox}
+
+In ROS2, a node is the fundamental unit of computation that performs a
+specific task in a robotic system. It is a process that communicates
+with other nodes in the system through topics, services, and parameters.
+
+\begin{figure}
+
+{\centering \includegraphics{./images/nodes.gif}
+
+}
+
+\caption{Source
+\href{https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html}{ros.org}}
+
+\end{figure}
+
+Nodes are often designed to perform a single function or task, such as
+reading data from a sensor, processing that data, or controlling an
+actuator. Nodes can be written in a variety of programming languages,
+including C++, Python, and others.
+
+Nodes communicate with each other by publishing and subscribing to
+topics. A topic is a named bus over which nodes can send and receive
+messages. When a node publishes a message to a topic, all other nodes
+that are subscribed to that topic will receive the message.
+
+Nodes can also provide and consume services. A service is a named
+request/response pair of messages that a node can use to get or set
+information or perform a specific action. A node that provides a service
+listens for requests, performs the requested action, and sends back a
+response.
+
+Nodes can also use parameters to store and retrieve configuration data.
+A parameter is a named value that can be set and read by nodes in the
+system. Parameters can be used to configure a node's behavior or to
+store information such as calibration data.
+
+In summary, nodes are the building blocks of a ROS2 system, and they
+communicate with each other through topics, services, and parameters.
+Each node performs a specific function or task, and together they form a
+distributed system that can be used to control robots or other complex
+systems.
+
+\bookmarksetup{startatroot}
+
+\hypertarget{topic}{%
+\chapter{Topic}\label{topic}}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
+
+You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
+Disciplina. This chapter is currently a dumping ground for ideas, and we
+don't recommend reading it. The complete version will be available here
+soon. Stay tuned!
+
+\end{tcolorbox}
+
+In ROS2, a topic is a named bus over which nodes can send and receive
+messages. Topics are used for asynchronous communication between nodes,
+allowing them to exchange data without needing to know anything about
+each other's internal workings.
+
+Each topic has a unique name, which is used by nodes to identify the
+topic they want to communicate on. Nodes can publish messages to a topic
+or subscribe to a topic to receive messages. When a node publishes a
+message to a topic, all other nodes that are subscribed to that topic
+will receive the message. \includegraphics{./images/topic.gif}1 Messages
+sent over a topic can be of any type, as long as they are defined in the
+same message package and have the same message name. For example, a
+sensor node might publish messages containing sensor readings, while a
+control node might subscribe to those messages and use the data to
+control a robot's movements.
+
+ROS2 uses a publisher-subscriber model for topic communication.
+Publishers are nodes that send messages to a topic, while subscribers
+are nodes that receive messages from a topic. Nodes can publish and
+subscribe to multiple topics at the same time, allowing for complex
+communication patterns between nodes.
+
+ROS2 topics are an important part of building a distributed robotic
+system, as they allow nodes to communicate in a decoupled manner. By
+using topics, nodes can exchange data without needing to know anything
+about each other's internal workings, making it easier to build complex
+robotic systems out of smaller, specialized components.
+
+\bookmarksetup{startatroot}
+
+\hypertarget{messages}{%
+\chapter{Messages}\label{messages}}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
+
+You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
+Disciplina. This chapter is currently a dumping ground for ideas, and we
+don't recommend reading it. The complete version will be available here
+soon. Stay tuned!
+
+\end{tcolorbox}
+
+In ROS2, messages are the basic units of data that are exchanged between
+nodes over topics. A message is a data structure that is defined in a
+message package and contains information about a specific topic.
+
+Messages can be of any type, as long as they are defined in the same
+message package and have the same message name. For example, a message
+might contain information about a robot's position and orientation, or
+about a sensor reading such as temperature or distance.
+
+ROS2 messages are typically defined using the ROS2 interface description
+language (IDL), which is a language-agnostic way of describing data
+structures. This makes it possible to define messages in a variety of
+programming languages, including C++, Python, and others.
+
+When a node publishes a message to a topic, it sends the message data
+over the network to all nodes that are subscribed to that topic. Each
+subscribed node can then receive the message and process the data as
+needed.
+
+Messages are a key component of building a distributed robotic system,
+as they allow nodes to communicate with each other in a decoupled
+manner. By defining messages that describe specific pieces of data,
+nodes can exchange information without needing to know anything about
+each other's internal workings. This makes it easier to build complex
+robotic systems out of smaller, specialized components.
+
+In summary, messages in ROS2 are the basic units of data that are
+exchanged between nodes over topics. They are defined using a
+language-agnostic data structure description language and can be of any
+type. Messages allow nodes to communicate in a decoupled manner, which
+is essential for building complex robotic systems out of smaller,
+specialized components.
+
+\bookmarksetup{startatroot}
+
+\hypertarget{services}{%
+\chapter{Services}\label{services}}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
+
+You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
+Disciplina. This chapter is currently a dumping ground for ideas, and we
+don't recommend reading it. The complete version will be available here
+soon. Stay tuned!
+
+\end{tcolorbox}
+
+ROS2, services are a way for nodes to request a specific operation from
+another node and receive a response. Services are similar to topics, but
+instead of sending and receiving messages, nodes send requests and
+receive responses.
+
+Services are defined using a service description file that specifies the
+name of the service, the types of the request and response messages, and
+any necessary parameters or options. The service definition is used to
+generate code that can be used by nodes to implement or use the service.
+
+When a node wants to use a service, it sends a request message to the
+node that provides the service. The service provider receives the
+request message, performs the requested operation, and sends a response
+message back to the requester. Once the response is received, the
+requester can continue with its operation.
+
+Services are typically used for operations that require a direct
+response, such as configuring a sensor, performing a calculation, or
+sending a command to a robot. Unlike topics, services are synchronous,
+meaning that the requester will block until it receives a response from
+the service provider.
+
+In ROS2, services are an important part of building distributed robotic
+systems, as they allow nodes to request specific operations from other
+nodes and receive a response. By using services, nodes can communicate
+in a decoupled manner and perform complex operations without needing to
+know anything about each other's internal workings.
+
+In summary, services in ROS2 are a way for nodes to request a specific
+operation from another node and receive a response. Services are defined
+using a service description file and are used for operations that
+require a direct response. Services are an important part of building
+distributed robotic systems, as they allow nodes to communicate in a
+decoupled manner and perform complex operations without needing to know
+anything about each other's internal workings.
+
+\bookmarksetup{startatroot}
+
+\hypertarget{ros2-concepts}{%
+\chapter{Ros2 Concepts}\label{ros2-concepts}}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
+
+You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
+Disciplina. This chapter is currently a dumping ground for ideas, and we
+don't recommend reading it. The complete version will be available here
+soon. Stay tuned!
+
+\end{tcolorbox}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3939}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6061}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+ROS2-Concept
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} \\
+\midrule()
+\endhead
+Nodes & A node is a process that performs a specific task, such as
+sensing or actuating. Nodes can communicate with each other by sending
+and receiving messages over topics. \\
+Topics & A topic is a named bus over which nodes can publish and
+subscribe to messages. Topics are used for one-to-many communication. \\
+Services & A service is a request-response communication model between
+nodes. A node can make a request to a service and receive a response
+from it. \\
+Actions & Actions are similar to services, but they allow for more
+complex communication patterns, such as canceling a request or providing
+feedback during the execution of a request. \\
+Parameters & Parameters are key-value pairs that can be used to
+configure nodes and their behavior. \\
+Launch files & A launch file is an XML file that specifies how to start
+multiple nodes with their respective parameters and configurations. \\
+RQT & RQT is a collection of ROS graphical tools for debugging,
+monitoring, and visualizing ROS topics, nodes, and messages. \\
+RViz & RViz is a 3D visualization tool for ROS that allows users to
+display and interact with sensor data and robot models in real-time. \\
+tf2 & tf2 is a library for keeping track of coordinate frames over time.
+It provides a way to transform data between different coordinate frames
+in a robot system. \\
+ROS2 Middleware & ROS2 Middleware is the layer of software that provides
+the communication infrastructure between nodes. ROS2 provides multiple
+middleware options, such as Fast RTPS and Cyclone DDS. \\
+\bottomrule()
+\end{longtable}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{creating-package}{%
+\chapter{Creating package}\label{creating-package}}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
+
+You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
+Disciplina. This chapter is currently a dumping ground for ideas, and we
+don't recommend reading it. The complete version will be available here
+soon. Stay tuned!
+
+\end{tcolorbox}
 
 \bookmarksetup{startatroot}
 
 \hypertarget{section}{%
 \chapter{}\label{section}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -232,7 +967,7 @@ soon. Stay tuned!
 \hypertarget{section-1}{%
 \chapter{}\label{section-1}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -246,7 +981,7 @@ soon. Stay tuned!
 \hypertarget{section-2}{%
 \chapter{}\label{section-2}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -260,7 +995,7 @@ soon. Stay tuned!
 \hypertarget{section-3}{%
 \chapter{}\label{section-3}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -274,7 +1009,7 @@ soon. Stay tuned!
 \hypertarget{section-4}{%
 \chapter{}\label{section-4}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -288,7 +1023,7 @@ soon. Stay tuned!
 \hypertarget{section-5}{%
 \chapter{}\label{section-5}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -302,7 +1037,7 @@ soon. Stay tuned!
 \hypertarget{section-6}{%
 \chapter{}\label{section-6}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -316,7 +1051,7 @@ soon. Stay tuned!
 \hypertarget{section-7}{%
 \chapter{}\label{section-7}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -330,7 +1065,7 @@ soon. Stay tuned!
 \hypertarget{section-8}{%
 \chapter{}\label{section-8}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -344,7 +1079,7 @@ soon. Stay tuned!
 \hypertarget{section-9}{%
 \chapter{}\label{section-9}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -358,7 +1093,7 @@ soon. Stay tuned!
 \hypertarget{section-10}{%
 \chapter{}\label{section-10}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -372,7 +1107,7 @@ soon. Stay tuned!
 \hypertarget{section-11}{%
 \chapter{}\label{section-11}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -386,7 +1121,7 @@ soon. Stay tuned!
 \hypertarget{section-12}{%
 \chapter{}\label{section-12}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -400,7 +1135,7 @@ soon. Stay tuned!
 \hypertarget{section-13}{%
 \chapter{}\label{section-13}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -414,7 +1149,7 @@ soon. Stay tuned!
 \hypertarget{section-14}{%
 \chapter{}\label{section-14}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -428,7 +1163,7 @@ soon. Stay tuned!
 \hypertarget{section-15}{%
 \chapter{}\label{section-15}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -442,7 +1177,7 @@ soon. Stay tuned!
 \hypertarget{section-16}{%
 \chapter{}\label{section-16}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -456,7 +1191,7 @@ soon. Stay tuned!
 \hypertarget{section-17}{%
 \chapter{}\label{section-17}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -470,7 +1205,7 @@ soon. Stay tuned!
 \hypertarget{section-18}{%
 \chapter{}\label{section-18}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -484,7 +1219,7 @@ soon. Stay tuned!
 \hypertarget{section-19}{%
 \chapter{}\label{section-19}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -498,7 +1233,7 @@ soon. Stay tuned!
 \hypertarget{section-20}{%
 \chapter{}\label{section-20}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -512,175 +1247,7 @@ soon. Stay tuned!
 \hypertarget{section-21}{%
 \chapter{}\label{section-21}}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
-
-You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
-Disciplina. This chapter is currently a dumping ground for ideas, and we
-don't recommend reading it. The complete version will be available here
-soon. Stay tuned!
-
-\end{tcolorbox}
-
-\bookmarksetup{startatroot}
-
-\hypertarget{section-22}{%
-\chapter{}\label{section-22}}
-
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
-
-You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
-Disciplina. This chapter is currently a dumping ground for ideas, and we
-don't recommend reading it. The complete version will be available here
-soon. Stay tuned!
-
-\end{tcolorbox}
-
-\bookmarksetup{startatroot}
-
-\hypertarget{section-23}{%
-\chapter{}\label{section-23}}
-
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
-
-You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
-Disciplina. This chapter is currently a dumping ground for ideas, and we
-don't recommend reading it. The complete version will be available here
-soon. Stay tuned!
-
-\end{tcolorbox}
-
-\bookmarksetup{startatroot}
-
-\hypertarget{section-24}{%
-\chapter{}\label{section-24}}
-
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
-
-You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
-Disciplina. This chapter is currently a dumping ground for ideas, and we
-don't recommend reading it. The complete version will be available here
-soon. Stay tuned!
-
-\end{tcolorbox}
-
-\bookmarksetup{startatroot}
-
-\hypertarget{section-25}{%
-\chapter{}\label{section-25}}
-
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
-
-You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
-Disciplina. This chapter is currently a dumping ground for ideas, and we
-don't recommend reading it. The complete version will be available here
-soon. Stay tuned!
-
-\end{tcolorbox}
-
-\bookmarksetup{startatroot}
-
-\hypertarget{section-26}{%
-\chapter{}\label{section-26}}
-
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
-
-You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
-Disciplina. This chapter is currently a dumping ground for ideas, and we
-don't recommend reading it. The complete version will be available here
-soon. Stay tuned!
-
-\end{tcolorbox}
-
-\bookmarksetup{startatroot}
-
-\hypertarget{section-27}{%
-\chapter{}\label{section-27}}
-
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
-
-You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
-Disciplina. This chapter is currently a dumping ground for ideas, and we
-don't recommend reading it. The complete version will be available here
-soon. Stay tuned!
-
-\end{tcolorbox}
-
-\bookmarksetup{startatroot}
-
-\hypertarget{section-28}{%
-\chapter{}\label{section-28}}
-
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
-
-You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
-Disciplina. This chapter is currently a dumping ground for ideas, and we
-don't recommend reading it. The complete version will be available here
-soon. Stay tuned!
-
-\end{tcolorbox}
-
-\bookmarksetup{startatroot}
-
-\hypertarget{section-29}{%
-\chapter{}\label{section-29}}
-
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
-
-You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
-Disciplina. This chapter is currently a dumping ground for ideas, and we
-don't recommend reading it. The complete version will be available here
-soon. Stay tuned!
-
-\end{tcolorbox}
-
-\bookmarksetup{startatroot}
-
-\hypertarget{section-30}{%
-\chapter{}\label{section-30}}
-
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
-
-You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
-Disciplina. This chapter is currently a dumping ground for ideas, and we
-don't recommend reading it. The complete version will be available here
-soon. Stay tuned!
-
-\end{tcolorbox}
-
-\bookmarksetup{startatroot}
-
-\hypertarget{section-31}{%
-\chapter{}\label{section-31}}
-
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
-
-You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
-Disciplina. This chapter is currently a dumping ground for ideas, and we
-don't recommend reading it. The complete version will be available here
-soon. Stay tuned!
-
-\end{tcolorbox}
-
-\bookmarksetup{startatroot}
-
-\hypertarget{section-32}{%
-\chapter{}\label{section-32}}
-
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
-
-You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
-Disciplina. This chapter is currently a dumping ground for ideas, and we
-don't recommend reading it. The complete version will be available here
-soon. Stay tuned!
-
-\end{tcolorbox}
-
-\bookmarksetup{startatroot}
-
-\hypertarget{section-33}{%
-\chapter{}\label{section-33}}
-
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, titlerule=0mm, bottomrule=.15mm, toprule=.15mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, breakable, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, opacityback=0, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, toprule=.15mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, left=2mm, colback=white, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
