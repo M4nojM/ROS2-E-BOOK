@@ -1,10 +1,12 @@
+# Introduction to ROS2
+
 ```{r}
 #| results: "asis"
 #| echo: false
 source("_common.R")
 status("drafting")
 ```
-# Introduction to ROS2
+
 
 ROS (Robot Operating System) was first released by Open Robotics in 2007 as a set of software libraries and tools for building robot applications. At the core of a ROS system are independent nodes that communicate with each other using a publish/subscribe messaging platform. For example, a sensor's driver could be implemented as a node that publishes sensor data, and this data can be read by any number of other nodes, such as filters, loggers, mapping, and navigation nodes. What's great about ROS is that these nodes can be on different systems or used by different architectures, making it flexible and adaptable to users' needs.
 

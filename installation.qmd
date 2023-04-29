@@ -1,3 +1,5 @@
+# Installation
+
 ```{r}
 #| results: "asis"
 #| echo: false
@@ -5,18 +7,6 @@ source("_common.R")
 status("drafting")
 ```
 
-
----
-website:
-  comments: 
-    hypothesis:
-      theme: clean
-      openSidebar: false
----
-
-
-
-# Installation 
 
 We recommend and use ROS2: humble (for now).
 
