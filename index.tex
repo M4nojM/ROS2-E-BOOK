@@ -206,7 +206,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, sharp corners, enhanced, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, sharp corners, enhanced, borderline west={3pt}{0pt}{shadecolor}, breakable, frame hidden, interior hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -262,7 +262,7 @@ You can find our LinkedIn profiles at
 \hypertarget{introduction-to-ros2}{%
 \chapter{Introduction to ROS2}\label{introduction-to-ros2}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -293,10 +293,10 @@ choice for building robotic applications.
 
 \bookmarksetup{startatroot}
 
-\hypertarget{opensidebar-false}{%
-\chapter{openSidebar: false}\label{opensidebar-false}}
+\hypertarget{installation}{%
+\chapter{Installation}\label{installation}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -304,15 +304,6 @@ don't recommend reading it. The complete version will be available here
 soon. Stay tuned!
 
 \end{tcolorbox}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-website: comments: hypothesis: theme: clean
-
-\bookmarksetup{startatroot}
-
-\hypertarget{installation}{%
-\chapter{Installation}\label{installation}}
 
 We recommend and use ROS2: humble (for now).
 
@@ -439,7 +430,7 @@ or
 \end{Highlighting}
 \end{Shaded}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-note-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-note-color-frame, opacityback=0]
 
 This step may be slightly different depending on the distribution you
 are using. Check the EPEL
@@ -498,7 +489,7 @@ or simply
 \hypertarget{windows}{%
 \chapter{Windows}\label{windows}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-caution-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-caution-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Danger}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-caution-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Danger}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-caution-color-frame, opacityback=0]
 
 Sorry, we dont do that here, although it is quite possible with ros2
 
@@ -509,7 +500,7 @@ Sorry, we dont do that here, although it is quite possible with ros2
 \hypertarget{sourcing}{%
 \chapter{Sourcing}\label{sourcing}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -557,7 +548,7 @@ on your machine. However, it does require a manual step to set up each
 terminal session to use ROS2, which can be seen as a minor
 inconvenience.
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-tip-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-tip-color-frame, opacityback=0]
 
 This can be advantageous when you want to work on multiple projects that
 require you to install multiple distros.
@@ -596,7 +587,7 @@ related settings, while it being isolated from other configurations.
 \hypertarget{command-line-tools}{%
 \chapter{Command line tools}\label{command-line-tools}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -634,7 +625,7 @@ with the Ament Python build system. \\
 \bottomrule()
 \end{longtable}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-note-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Expand To Learn More About \textbf{``ros2 pkg create''}}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Expand To Learn More About \textbf{``ros2 pkg create''}}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-note-color-frame, opacityback=0]
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3448}}
@@ -691,7 +682,7 @@ package with \\
 \hypertarget{nodes}{%
 \chapter{Nodes}\label{nodes}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -747,7 +738,7 @@ systems.
 \hypertarget{topic}{%
 \chapter{Topic}\label{topic}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -789,7 +780,7 @@ robotic systems out of smaller, specialized components.
 \hypertarget{messages}{%
 \chapter{Messages}\label{messages}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -836,7 +827,7 @@ specialized components.
 \hypertarget{services}{%
 \chapter{Services}\label{services}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -886,7 +877,7 @@ anything about each other's internal workings.
 \hypertarget{ros2-concepts}{%
 \chapter{Ros2 Concepts}\label{ros2-concepts}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -939,7 +930,7 @@ middleware options, such as Fast RTPS and Cyclone DDS. \\
 \hypertarget{creating-package}{%
 \chapter{Creating package}\label{creating-package}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -953,7 +944,7 @@ soon. Stay tuned!
 \hypertarget{section}{%
 \chapter{}\label{section}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -967,7 +958,7 @@ soon. Stay tuned!
 \hypertarget{section-1}{%
 \chapter{}\label{section-1}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -981,7 +972,7 @@ soon. Stay tuned!
 \hypertarget{section-2}{%
 \chapter{}\label{section-2}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -995,7 +986,7 @@ soon. Stay tuned!
 \hypertarget{section-3}{%
 \chapter{}\label{section-3}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1009,7 +1000,7 @@ soon. Stay tuned!
 \hypertarget{section-4}{%
 \chapter{}\label{section-4}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1023,7 +1014,7 @@ soon. Stay tuned!
 \hypertarget{section-5}{%
 \chapter{}\label{section-5}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1037,7 +1028,7 @@ soon. Stay tuned!
 \hypertarget{section-6}{%
 \chapter{}\label{section-6}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1051,7 +1042,7 @@ soon. Stay tuned!
 \hypertarget{section-7}{%
 \chapter{}\label{section-7}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1065,7 +1056,7 @@ soon. Stay tuned!
 \hypertarget{section-8}{%
 \chapter{}\label{section-8}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1079,7 +1070,7 @@ soon. Stay tuned!
 \hypertarget{section-9}{%
 \chapter{}\label{section-9}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1093,7 +1084,7 @@ soon. Stay tuned!
 \hypertarget{section-10}{%
 \chapter{}\label{section-10}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1107,7 +1098,7 @@ soon. Stay tuned!
 \hypertarget{section-11}{%
 \chapter{}\label{section-11}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1121,7 +1112,7 @@ soon. Stay tuned!
 \hypertarget{section-12}{%
 \chapter{}\label{section-12}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1135,7 +1126,7 @@ soon. Stay tuned!
 \hypertarget{section-13}{%
 \chapter{}\label{section-13}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1149,7 +1140,7 @@ soon. Stay tuned!
 \hypertarget{section-14}{%
 \chapter{}\label{section-14}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1163,7 +1154,7 @@ soon. Stay tuned!
 \hypertarget{section-15}{%
 \chapter{}\label{section-15}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1177,7 +1168,7 @@ soon. Stay tuned!
 \hypertarget{section-16}{%
 \chapter{}\label{section-16}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1191,7 +1182,7 @@ soon. Stay tuned!
 \hypertarget{section-17}{%
 \chapter{}\label{section-17}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1205,7 +1196,7 @@ soon. Stay tuned!
 \hypertarget{section-18}{%
 \chapter{}\label{section-18}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1219,7 +1210,7 @@ soon. Stay tuned!
 \hypertarget{section-19}{%
 \chapter{}\label{section-19}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1233,7 +1224,7 @@ soon. Stay tuned!
 \hypertarget{section-20}{%
 \chapter{}\label{section-20}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
@@ -1247,7 +1238,7 @@ soon. Stay tuned!
 \hypertarget{section-21}{%
 \chapter{}\label{section-21}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacitybacktitle=0.6, colback=white, colbacktitle=quarto-callout-important-color!10!white, breakable, arc=.35mm, rightrule=.15mm, left=2mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, coltitle=black, opacityback=0, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, leftrule=.75mm, bottomtitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, bottomrule=.15mm, titlerule=0mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, rightrule=.15mm, colback=white, leftrule=.75mm, colframe=quarto-callout-important-color-frame, opacityback=0]
 
 You are reading the work-in-progress edition of ROS 2 : Mea Via et Mea
 Disciplina. This chapter is currently a dumping ground for ideas, and we
